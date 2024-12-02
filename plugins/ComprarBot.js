@@ -1,5 +1,5 @@
 const handler = async (m, {conn}) => {
-  m.reply(global.ComprarBot, img);
+  m.reply(global.ComprarBot);
 };
 handler.command = /^(ComprarBot|Comprar|comprar|ComprarBot)$/i;
 export default handler;
