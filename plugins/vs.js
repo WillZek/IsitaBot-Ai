@@ -17,13 +17,13 @@ var handler = async (m, { conn, participants, groupMetadata, args, text }) => {
     let modo = `│🎮 𝗠𝗢𝗗𝗔𝗟𝗜𝗗𝗔𝗗: *${modalidad}*`;
 
     let texto = `
-╭──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╮
+╭──────>⋆☽⋆ 💫 ⋆☾⋆<──────╮
 ㅤ          •𝟰  𝗩 𝗘 𝗥 𝗦 𝗨 𝗦  𝟰•
                     *${groupMetadata.subject}*
-╰──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╯
+╰──────>⋆☽⋆ 💫 ⋆☾⋆<──────╯
 
 
-╭──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╮
+╭──────>⋆☽⋆ 💫 ⋆☾⋆<──────╮
 ${yo}
 ${modo}
 │
