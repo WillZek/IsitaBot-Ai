@@ -22,9 +22,9 @@ global.prems = []
 
 global.packname = `[ Sticker Maker`
 global.author = '🍨 Isita Ai WhatsApp Bot ]'
-global.wait = '🚩 *Aɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ, sᴏʏ ʟᴇɴᴛ𝙾... ฅ^•ﻌ•^ฅ*'
+global.wait = '🚩 *Aɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ... ฅ^•ﻌ•^ฅ*'
 global.botname = '[ 𝐈𝐬𝐢𝐭𝐚 𝐀𝐢 𝐖𝐡𝐚𝐬𝐀𝐩𝐩 𝐁𝐨𝐭 ]'
-global.textbot = `Powered By WillZek`
+global.textbot = `Powered By Isa`
 global.listo = '*Aqui tiene ฅ^•ﻌ•^ฅ*'
 global.namechannel = '𝐓𝐇𝐄 𝐈𝐒𝐈𝐓𝐀𝐁𝐎𝐓-𝐀𝐈 🍨'
 
@@ -35,7 +35,7 @@ global.miniurl = fs.readFileSync('./storage/img/miniurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.group = 'https://chat.whatsapp.com/IO3kjd9ovw1Dm8pVUE2MgN'
+global.group = 'https://chat.whatsapp.com/ExmoRYykMLSGehQRGIuxHP'
 global.canal = 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
