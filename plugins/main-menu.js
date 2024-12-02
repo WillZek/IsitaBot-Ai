@@ -46,7 +46,7 @@ let tags = {
 
 const defaultMenu = {
   before: `
-> 「 ${textbot} あ⁩ 」\n
+> 「 🌠AQUI TIENES MI MENU🌠 」\n
 
 ›   ╔──────¤◎¤──────╗
 › ╭━❍☆𝐈𝐒𝐈𝐓𝐀𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮
