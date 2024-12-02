@@ -1,5 +1,5 @@
 let handler = async (m, { conn, usedPrefix, isOwner }) => {
-let ComprarBot = "〔 ISITA - BOT 〕
+let text_owner = "〔 ISITA - BOT 〕
 
 BOT PARA GRUPO :
 wa.me/529831715910
