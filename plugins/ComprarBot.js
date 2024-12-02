@@ -4,7 +4,6 @@ const handler = async (m, {conn}) => {
 handler.command = /^(ComprarBot|Comprar|comprar|ComprarBot)$/i;
 export default handler;
 
-let img = 'https://i.ibb.co/s9N9QhG/file.jpg'
 global.ComprarBot = `
 〔 ISITA - BOT 〕
 
