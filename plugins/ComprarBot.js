@@ -4,6 +4,7 @@ const handler = async (m, {conn}) => {
 handler.command = /^(ComprarBot|Comprar|comprar|ComprarBot)$/i;
 export default handler;
 
+await conn.sendFile(m.chat, "https://i.ibb.co/s9N9QhG/file.jpg", 'thumbnail.jpg', txt_ComprarBot, m, null, rcanal)
 global.ComprarBot = `
 〔 ISITA - BOT 〕
 
@@ -12,6 +13,4 @@ wa.me/529831715910
 
 BOT PERZONALIZADO :
 wa.me/50557865603
-
-await conn.sendFile(m.chat, "https://i.ibb.co/s9N9QhG/file.jpg", 'thumbnail.jpg', txt_owner, m, null, rcanal)
 `;
