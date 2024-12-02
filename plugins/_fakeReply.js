@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 export async function before(m, { conn }) {
 let name =  '𝐈𝐬𝐢𝐭𝐚𝐁𝐨𝐭 - 𝐀𝐢'
 let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
-"https://qu.ax/nPMCF.jpg",
+"https://i.ibb.co/z5RngV2/file.jpg",
 "https://qu.ax/YelQE.jpg",
 "https://qu.ax/YelQE.jpg",
 "https://qu.ax/RyMor.jpg",
