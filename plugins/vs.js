@@ -19,7 +19,7 @@ var handler = async (m, { conn, participants, groupMetadata, args, text }) => {
     let texto = `
 ╭──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╮
 ㅤ          •𝟰  𝗩 𝗘 𝗥 𝗦 𝗨 𝗦  𝟰•
-                    ${groupMetadata.subject}
+                    *${groupMetadata.subject}*
 ╰──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╯
 
 
