@@ -1,10 +1,10 @@
 import fetch from 'node-fetch'
 
 let handler  = async (m, { conn, usedPrefix, command }) => {
-let img = await (await fetch(`https://files.catbox.moe/ge77oy.jpg`)).buffer()
+let img = await (await fetch(`https://i.ibb.co/s9N9QhG/file.jpg`)).buffer()
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
-let txt = `*Hola!, te invito a unirte a los grupos oficiales de de CrowBot-Ai para convivir con la comunidad :D*
+let txt = `*Hola!, te invito a unirte a los grupos oficiales de de IsitaBot-Ai para convivir con la comunidad🌟*
 
 *✰* ${group}
 
@@ -15,7 +15,7 @@ let txt = `*Hola!, te invito a unirte a los grupos oficiales de de CrowBot-Ai pa
 Canal :
 *✰* ${canal}
 
-> 🚩 ${textbot}`
+> 💫 ${textbot}`
 await conn.sendFile(m.chat, img, "Thumbnail.jpg", txt, m, null, rcanal)
 }
 handler.help = ['grupos']
