@@ -13,8 +13,8 @@ await conn.sendMessage(m.chat, { text: message }, { quoted: m });
 await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' });
 }
 }
-handler.help = ['precios2'];
+handler.help = ['precios1'];
 handler.tags = ['main'];
-handler.command = ['precios2'];
+handler.command = ['precios1'];
 handler.group = true;
 export default handler;
