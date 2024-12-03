@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
 // React con un emoji al mensaje
 m.react('💫');
 // Mensaje que se enviará
-const message = "*ACLARACIONES*\n\n> ${botname} ";
+const message = "*ACLARACIONES*\n\n> *By IsitaBot*";
 if (m.isGroup) {
 // URL de la imagen
 const imageUrl = 'https://i.ibb.co/pjt74mL/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
