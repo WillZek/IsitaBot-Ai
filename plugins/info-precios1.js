@@ -14,15 +14,10 @@ who = m.sender; // En caso contrario, usamos el emisor
 let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
 let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
 m.react('🫦');
-// Construimos el mensaje dependiendo de si hay una mención o no
-let str;
-if (m.mentionedJid && m.mentionedJid.length > 0) {
-str = `\`${name2}\` le pidió precios a \`${name || who}\`.`; // Mensaje si hay mención
-} else {
-str = `\`${name2}\` pidió precios.`; // Mensaje si no hay mención
-}
 // Comprobamos si el comando es .precios1
 if (m.body === '.precios1') {
+// Mensaje que se enviará
+let str = `\`${name2}\` pidió precios.`;
 // Reemplaza la URL con la imagen que deseas enviar
 const imageUrl = 'https://i.ibb.co/TcTRpHW/file.jpg';
 // Enviamos el mensaje con la imagen y el mensaje correspondiente
