@@ -1,5 +1,3 @@
-¡Hola WillZek - ASISTENCIA! 🎉 Vamos a hacer que ese código envíe una imagen en lugar de un vídeo. Aquí tienes el código modificado:
-```javascript
 // Código Hecho Por Niño Piña wa.me/50557865603
 let handler = async (m, { conn }) => {
 // React con un emoji al mensaje
