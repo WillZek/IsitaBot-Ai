@@ -1,19 +1,20 @@
-// Código creado por WillZek wa.me/50557865603
-import fs from 'fs';
-import path from 'path';
+// Código Hecho Por Niño Piña wa.me/50557865603
 let handler = async (m, { conn }) => {
-// Reacción al mensaje
-m.react('🫦');
-// Comprobamos si el comando es .precios1
-if (m.body.trim() === '.precios1') { // Usamos trim para eliminar espacios en blanco
-// Reemplaza la URL con la imagen que deseas enviar
-const imageUrl = 'https://i.ibb.co/TcTRpHW/file.jpg';
-// Enviamos solo la imagen
-await conn.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+// React con un emoji al mensaje
+m.react('💫');
+// Mensaje que se enviará
+const message = "*AQUI ESTAN LOS PRECIOS.*\n\n> Renovación💫";
+if (m.isGroup) {
+// URL de la imagen
+const imageUrl = 'https://i.ibb.co/TcTRpHW/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
+// Envía el mensaje
+await conn.sendMessage(m.chat, { text: message }, { quoted: m });
+// Envía la imagen
+await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' });
 }
 }
-handler.help = ['precios1'];
+handler.help = ['precios2'];
 handler.tags = ['main'];
-handler.command = ['precios1'];
+handler.command = ['precios2'];
 handler.group = true;
 export default handler;
