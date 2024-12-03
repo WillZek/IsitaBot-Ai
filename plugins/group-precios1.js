@@ -6,7 +6,7 @@ m.react('💫');
 const message = "*AQUI ESTAN LOS PRECIOS.*\n\n> Renovación💫";
 if (m.isGroup) {
 // URL de la imagen
-const imageUrl = 'https://i.ibb.co/TcTRpHW/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
+const imageUrl = 'https://i.ibb.co/x5w5CHk/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
 // Envía el mensaje
 await conn.sendMessage(m.chat, { text: message }, { quoted: m });
 // Envía la imagen
