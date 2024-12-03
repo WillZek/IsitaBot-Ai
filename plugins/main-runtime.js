@@ -22,13 +22,13 @@ const time = dd.toLocaleString('en-US', {
 
 function rTime(seconds) {
   seconds = Number(seconds);
-  var d = Math.floor(seconds / (3600 * 24));
-  var h = Math.floor((seconds % (3600 * 24)) / 3600);
-  var m = Math.floor((seconds % 3600) / 60);
-  var s = Math.floor(seconds % 60);
-  var dDisplay = d > 0 ? d + (d == 1 ? " dia, " : " Dias, ") : "";
-  var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Horas, ") : "";
-  var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minutos, ") : "";
-  var sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundos") : "";
+  let d = Math.floor(seconds / (3600 * 24));
+  let h = Math.floor((seconds % (3600 * 24)) / 3600);
+  let m = Math.floor((seconds % 3600) / 60);
+ let s = Math.floor(seconds % 60);
+  let dDisplay = d > 0 ? d + (d == 1 ? " dia, " : " Dias, ") : "";
+  let hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Horas, ") : "";
+  let mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minutos, ") : "";
+  let sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundos") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
