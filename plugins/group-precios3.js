@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
 m.react('💫');
 // Mensaje que se enviará
 const message = "*AQUI ESTAN LOS PRECIOS.*\n\n> Continuación De los Precios1💫";
-if (m. rcanal) {
+if (m.isGroup) {
 // URL de la imagen
 const imageUrl = 'https://i.ibb.co/h7MpyhP/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
 // Envía el mensaje
@@ -14,5 +14,6 @@ await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, {
 }
 handler.help = ['precios3'];
 handler.tags = ['main'];
+handler.group = true;
 handler.command = ['precios3'];
 export default handler;
