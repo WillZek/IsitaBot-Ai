@@ -4,11 +4,10 @@ let handler = async (m, { conn }) => {
 m.react('💫');
 // Mensaje que se enviará
 const message = "*ACLARACIONES*\n\n> *By IsitaBot*";
-if (m.isGroup) {
+if (m. rcanal) {
 // URL de la imagen
 const imageUrl = 'https://i.ibb.co/pjt74mL/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
 // Envía el mensaje
-await conn.sendMessage(m.chat, { text: message }, { quoted: m });
 // Envía la imagen
 await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' });
 }
@@ -16,5 +15,4 @@ await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, {
 handler.help = ['aclaraciones'];
 handler.tags = ['main'];
 handler.command = ['aclaraciones', 'aclarar', 'aclaracion'];
-handler.group = true;
 export default handler;
