@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
 m.react('💫');
 // Mensaje que se enviará
 const message = "*ACLARACIONES*\n\n> *By IsitaBot*";
-if (m. rcanal) {
+if (m.isGroup) {
 // URL de la imagen
 const imageUrl = 'https://i.ibb.co/pjt74mL/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
 // Envía el mensaje
@@ -14,5 +14,6 @@ await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, {
 }
 handler.help = ['aclaraciones'];
 handler.tags = ['main'];
+handler.group = true;
 handler.command = ['aclaraciones', 'aclarar', 'aclaracion'];
 export default handler;
