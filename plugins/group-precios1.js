@@ -14,6 +14,6 @@ await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, {
 }
 handler.help = ['precios1'];
 handler.tags = ['main'];
-handler.group = true
+handler.group = true;
 handler.command = ['precios1'];
 export default handler;
