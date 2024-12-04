@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
 m.react('💫');
 // Mensaje que se enviará
 const message = "*AQUI ESTAN LOS PRECIOS.*\n\n> Renovación💫";
-if (m. isGroup) {
+if (m.isGroup) {
 // URL de la imagen
 const imageUrl = 'https://i.ibb.co/x5w5CHk/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
 // Envía el mensaje
