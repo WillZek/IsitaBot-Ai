@@ -100,7 +100,6 @@ let handler = async (_0x10bd40, {
 };
 handler.help = ["pinterest"];
 handler.tags = ["img"];
-//handler.yenes = 1;
 handler.group = true;
 handler.register = true
 handler.command = ['pinterest'];
