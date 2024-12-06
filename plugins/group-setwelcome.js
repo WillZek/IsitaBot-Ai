@@ -1,11 +1,15 @@
-const handler = async (m, { conn, text, isROwner, isOwner }) => {
+//import db from '../lib/database.js'
+
+let handler = async (m, { conn, text, isROwner, isOwner }) => {
   if (text) {
-    global.db.data.chats[m.chat].welcome = text;
-    m.reply('[❗] MENSAJE DE BIENVENIDA CONFIGURADO CORRECTAMENTE PARA ESTE GRUPO*');
-  } else throw `[❗] INGRESE EL MENSAJE DE BIENVENIDA QUE DESEE AGREGAR, USE:*\n*- @user (mención)*\n*- @group (nombre de grupo)*\n*- @desc (description de grupo)*`;
-};
-handler.help = ['setwelcome <text>'];
-handler.tags = ['group'];
-handler.command = ['setwelcome'];
-handler.admin = true;
-export default handler;
+    global.db.data.chats[m.chat].sWelcome = text
+    m.reply(`✅ ${mssg.welMsgOn}`)
+  } else throw `✳️ ${mssg.welMsg}`
+}
+handler.help = ['setwelcome']
+handler.tags = ['group']
+handler.command = ['setwelcome'] 
+handler.admin = true
+handler.owner = false
+
+export default handler
