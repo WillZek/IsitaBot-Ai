@@ -10,6 +10,7 @@ text: _0x27db11,
 usedPrefix: _0x55e61b,
 command: _0x5ad406
 }) => {
+try {
 if (!_0x27db11) {
 return _0x9c7141.reply(_0x10bd40.chat, "🖼️ *¿Qué quieres buscar en Pinterest?*", _0x10bd40, rcanal);
 }
@@ -67,6 +68,7 @@ _0x51323f.push({
 'hasMediaAttachment': true,
 'imageMessage': await _0x3f3fc7(_0x47c48a)
 }),
+'nativeFlowMessage': proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
 handler.help = ["pinterest"];
 handler.tags = ["img"];
 //handler.yenes = 1;
