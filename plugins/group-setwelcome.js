@@ -2,7 +2,7 @@
 
 let handler = async (m, { conn, text, isROwner, isOwner }) => {
   if (text) {
-    global.db.data.chats[m.chat].sWelcome = text
+    global.db.data.chats[m.chat].sBienvenida = text
     m.reply(`✅ ${mssg.welMsgOn}`)
   } else throw `✳️ ${mssg.welMsg}`
 }
