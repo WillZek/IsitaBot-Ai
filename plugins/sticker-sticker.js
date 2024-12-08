@@ -15,13 +15,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       if (!img) throw m.reply(`✧ Responde a un Vídeo con el comando*${usedPrefix + command}*`)
       let stiker = false
       try {
-        stiker = await sticker(img, false, global.packname, global.maker)
+        stiker = await sticker(img, false, global.packname, global.author)
       } catch (e) {
         console.error(e)
       } finally {
         if (!stiker) {
           let out = await uploadFile(img)
-          stiker = await sticker(false, out, global.packname, global.maker)
+          stiker = await sticker(false, out, global.packname, global.author)
         }
       }
       conn.sendFile(m.chat, stiker, 'sticker.webp', '', m, null)
