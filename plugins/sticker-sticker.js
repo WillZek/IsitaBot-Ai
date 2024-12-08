@@ -15,13 +15,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       if (!img) throw m.reply(`✧ Responde a un Vídeo con el comando*${usedPrefix + command}*`)
       let stiker = false
       try {
-        stiker = await sticker(img, false, global.packname, global.author)
+        stiker = await sticker(img, false, global.stickpack, global.stickauth)
       } catch (e) {
         console.error(e)
       } finally {
         if (!stiker) {
           let out = await uploadFile(img)
-          stiker = await sticker(false, out, global.packname, global.author)
+          stiker = await sticker(false, out, global.stickpack, global.stickauth)
         }
       }
       conn.sendFile(m.chat, stiker, 'sticker.webp', '', m, null)
@@ -139,8 +139,8 @@ export default handler
 async function createSticker(img, url, packName, authorName, quality) {
   let stickerMetadata = {
     type: 'full',
-    pack: packname,
-    author: author,
+    pack: stickpack,
+    author: stickauth,
     quality
   }
   return (new Sticker(img ? img : url, stickerMetadata)).toBuffer()
