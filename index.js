@@ -23,7 +23,7 @@ font: 'chrome',
 align: 'center',
 colors: ['red']
 });
-say(`Developed By • WillZek`, {
+say(`Developed By • Isa`, {
 font: 'console',
 align: 'center',
 colors: ['magenta']
