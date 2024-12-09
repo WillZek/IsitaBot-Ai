@@ -38,7 +38,7 @@ global.rcanal = {
 //Enlaces
 var canal =   'https://whatsapp.com/channel/0029Vakpp8h1Hsq5Y5kbF33t'
 var git = 'https://github.com/WillZek'  
-var github = 'https://github.com/WillZek/CrowBot-ST' 
+var github = 'https://github.com/WillZek/IsitaBot-Ai' 
 var facebook = 'https://www.facebook.com/profile.php?id=100055985748040' 
 let tiktok = 'https://tiktok.com/@the_crow_legendario_bs'
 let correo = 'sm.ninopina10@gmail.com'
