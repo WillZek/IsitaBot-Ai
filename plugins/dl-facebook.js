@@ -35,8 +35,9 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   try {
     await conn.sendMessage(m.chat, { video: { url: video }, caption: dev, fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
   } catch (error) {
-    return conn.reply(m.chat, '*`Error al enviar el video. ${e.message} `*', m fake);
+    return conn.reply(m.chat, '*`Error al enviar el video. ${error.message} `*', m fake);
 console.log(e)
+}
   await m.react('❌');
   }
 };
