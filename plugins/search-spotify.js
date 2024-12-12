@@ -20,7 +20,7 @@ let image = await createImage(track.image)
 
 /* push.push({
 body: proto.Message.InteractiveMessage.Body.fromObject({
-text: '${track.title} - ${track.artist}'
+text: `${track.title} - ${track.artist}`
 }),
 footer: proto.Message.InteractiveMessage.Footer.fromObject({text: `By IsitaBot`}),
 header: proto.Message.InteractiveMessage.Header.fromObject({title: '', hasMediaAttachment: true, imageMessage: image}),
