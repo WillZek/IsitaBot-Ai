@@ -2,7 +2,6 @@
 import fetch from 'node-fetch'
 const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
-await m.reply(m.chat, 'error ${error.message}')
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply('Ingresa el texto de lo que quieres buscar en Spotify ❤️‍🔥');
 
@@ -71,7 +70,7 @@ carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ca
 await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 } catch (error) {
 console.error(error)
-await m.reply(m.chat, 'error ${error.message}');
+await m.reply(m.chat, `error ${error.message}`);
 }}
 
 handler.help = ["spotifysearch"]
