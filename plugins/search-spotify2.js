@@ -64,6 +64,7 @@ return response.data;
 } catch (error) {
 return text;
 }}
+await m.react('✖️')
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 if (!text) throw `╰⊱❗️⊱ *ACCIÓN MAL USADA* ⊱❗️⊱╮\n\n💛 *DEBE DE USAR EL COMANDO COMO EN ESTE EJEMPLO:*\n${usedPrefix + command} *tu foto*`
 try {
