@@ -5,16 +5,16 @@ import { readdirSync, unlinkSync, rmSync } from 'fs'
 
 let handler = async (m, { conn, __dirname, args }) => {
 
-  let Sessions = "./sessions"
-  readdirSync(Sessions).forEach((file) => {
+  let Sessions = "./CrowSession"
+  readdirSync(CrowSession).forEach((file) => {
     if (file !== 'creds.json') {
-      unlinkSync(`${Sessions}/${file}`, { recursive: true, force: true })
+      unlinkSync(`${CrowSession}/${file}`, { recursive: true, force: true })
     }
   })
 
 let bbtSessions = "./serbot"
 readdirSync(bbtSessions, { withFileTypes: true }).forEach((file) => {
-  let filePath = `${bbtSessions}/${file.name}`
+  let filePath = `${bbtCrowSession}/${file.name}`
   if (file.isDirectory()) {
     readdirSync(filePath, { withFileTypes: true }).forEach((subFile) => {
       let subFilePath = `${filePath}/${subFile.name}`
