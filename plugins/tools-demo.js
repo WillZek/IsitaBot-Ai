@@ -20,6 +20,7 @@ body: ``,
 thumbnailUrl: 'https://tinyurl.com/2awg2bch', 
 sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'}}},
 { quoted: m})
+   m.react('✨')
     } catch (err) {
         m.reply('error cik:/ ' + err);
     }
