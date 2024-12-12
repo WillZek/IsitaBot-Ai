@@ -19,6 +19,7 @@ let json = await api.json()
 for (let track of json.data) {
 let image = await createImage(track.image)
 
+await m.react('✅')
 /* push.push({
 body: proto.Message.InteractiveMessage.Body.fromObject({
 text: `${track.title} - ${track.artist}`
