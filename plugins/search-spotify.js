@@ -4,7 +4,6 @@ const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply('Ingresa el texto de lo que quieres buscar en Spotify ❤️‍🔥');
-m.react('✅')
 
 try {
 async function createImage(url) {
@@ -23,7 +22,7 @@ let image = await createImage(track.image)
 body: proto.Message.InteractiveMessage.Body.fromObject({
 text: '${track.title} - ${track.artist}'
 }),
-footer: proto.Message.InteractiveMessage.Footer.fromObject({text: `©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`}),
+footer: proto.Message.InteractiveMessage.Footer.fromObject({text: `By IsitaBot`}),
 header: proto.Message.InteractiveMessage.Header.fromObject({title: '', hasMediaAttachment: true, imageMessage: image}),
 nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
 buttons: [ */ 
