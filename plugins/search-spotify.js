@@ -71,6 +71,7 @@ carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ca
 await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 } catch (error) {
 console.error(error)
+await m.reply(m.chat, 'error ${error.message}');
 }}
 
 handler.help = ["spotifysearch"]
