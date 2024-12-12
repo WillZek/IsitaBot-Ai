@@ -34,7 +34,7 @@ await m.react('✅')
 }
 handler.help = ['clearsession']
 handler.tags = ['owner']
-handler.command = /^(clearsession)$/i
+handler.command = /^(clearsession2)$/i
 handler.rowner = true
 
 export default handler
