@@ -42,9 +42,9 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
     text2 += `> 🎄Espera Un Momento, Enviando Archivo Tenga Paciencia❄️`
       await conn.reply(m.chat, text2, m, {
 contextInfo: { externalAdReply :{ showAdAttribution: true,
-                        sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d',
+                        sourceUrl: 'https://www.instagram.com/star.moony_desing',
                         mediaType: 2,
-                        description: `❤️‍🔥Sigue El Canal Por Favor❤️‍🔥`,
+                        description: `❤️‍🔥Sigueme En Instagram ❤️‍🔥`,
                         title: `❄️ Gracias Por Usar IsitaBot, Sigue El Canal⛄`,
                         body: `🎄 Powered By WillZek`,          previewType: 0,
                         thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
