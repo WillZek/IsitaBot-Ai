@@ -12,8 +12,8 @@ let txt = `*Hola!, te invito a unirte a los grupos oficiales de de IsitaBot-Ai p
 
 ➠ Enlace anulado? entre aquí! 
 
-Canal :
-*✰* ${canal}
+Instagram :
+*✰* https://www.instagram.com/star.moony_desing
 
 > 💫 ${textbot}`
 await conn.sendFile(m.chat, img, "Thumbnail.jpg", txt, m, null, rcanal)
