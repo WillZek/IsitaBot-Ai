@@ -12,9 +12,6 @@ let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
 
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
 
-global.rins = 
-'<a href="https://www.instagram.com/Star.moony_desing" target="_blank">Ver Instagram<a/>'
-
 global.rcanal = {
  contextInfo: {
              isForwarded: true,
