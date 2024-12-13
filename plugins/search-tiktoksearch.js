@@ -39,7 +39,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           body: '<(✿◠‿◠)> 𝐈𝐬𝐢𝐭𝐚𝐁𝐨𝐭-𝐀𝐢 ✨',
           previewType: 0, 
           thumbnail: catalogo,
-          sourceUrl: canal 
+          sourceUrl: 'https://www.instagram.com/star.moony_desing', 
         }
       }
     });
