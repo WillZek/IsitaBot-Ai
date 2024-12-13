@@ -44,14 +44,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       }
       m.reply(stiker)
     } else {
-      m.reply('     `✧ Responde a una Imagen o Video.`')
+      m.reply(m.chat, '     `✧ Responde a una Imagen o Video.`', m, rcanal)
     }
   } catch (e) {
     console.error(e)
     m.reply('Error')
   }
 }
-
 handler.help = ['sticker']
 handler.tags = ['sticker']
 
