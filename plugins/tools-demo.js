@@ -18,7 +18,7 @@ title: `[ IsitaBot By Isa ]`,
 body: ``,
 "previewType": "PHOTO",
 thumbnailUrl: 'https://tinyurl.com/2awg2bch', 
-sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'}}},
+sourceUrl: 'https://www.instagram.com/star.moony_desing'}}},
 { quoted: m})
    m.react('✨')
     } catch (err) {
