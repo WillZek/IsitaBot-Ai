@@ -18,7 +18,7 @@ global.rcanal = {
  contextInfo: {
              isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "https://www.instagram.com/Star.moony_desing",
+      newsletterJid: group,
       serverMessageId: 100,
       newsletterName: name2,
    }, 
