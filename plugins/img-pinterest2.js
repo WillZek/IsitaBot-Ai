@@ -5,8 +5,8 @@ conn.reply(m.chat, '💫 *Descargando su imagen...*', m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: wm,
-previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
+previewType: 0, thumbnail: icono,
+sourceUrl: 'https://www.instagram.com/star.moony_desing' }}})
 const res = await googleImage(text);
 const image = await res.getRandom();
 const link = image;
