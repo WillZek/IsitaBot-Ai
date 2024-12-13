@@ -29,7 +29,7 @@ global.rcanal = {
     description: null, 
     previewType: "PHOTO", 
     thumbnailUrl: icono, 
-    sourceUrl: canal, 
+    sourceUrl: 'https://www.instagram.com/star.moony_desing', 
     mediaType: 1, 
     renderLargerThumbnail: false }, 
     }, 
