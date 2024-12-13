@@ -2,7 +2,11 @@ import fetch from 'node-fetch'
 
 export async function before(m, { conn }) {
 let name =  '𝐈𝐬𝐢𝐭𝐚𝐁𝐨𝐭 - 𝐀𝐢'
-global.name2 = '𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 𝐈𝐬𝐢𝐭𝐚𝐁𝐨𝐭'
+
+global.rinsta = {
+ conn.sendButton(ir) 
+sourceUrl = 'https://www.instagram.com/star.moony_desing',
+}
 
 let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
 "https://i.ibb.co/z5RngV2/file.jpg",
