@@ -2,6 +2,7 @@ import fetch from 'node-fetch'
 
 export async function before(m, { conn }) {
 let name =  '𝐈𝐬𝐢𝐭𝐚𝐁𝐨𝐭 - 𝐀𝐢'
+let name2 = '𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 𝐈𝐬𝐢𝐭𝐚𝐁𝐨𝐭'
 let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
 "https://i.ibb.co/z5RngV2/file.jpg",
 "https://i.ibb.co/RgwnSNH/file.jpg",
@@ -18,7 +19,7 @@ global.rcanal = {
     forwardedNewsletterMessageInfo: {
       newsletterJid: "https://www.instagram.com/Star.moony_desing",
       serverMessageId: 100,
-      newsletterName: name,
+      newsletterName: name2,
    }, 
    externalAdReply: {
     showAdAttribution: true, 
