@@ -28,7 +28,6 @@ let tags = {
   'sticker': '🌟 STICKER 🌟',
   'img': '💫 IMAGE 💫',
   'group': '🌟 GROUPS 🌟',
-//  'logo': '💫 MAKER💫',
   'nable': '💫 ON / OFF 🌟', 
   'premium': '💫 PREMIUM 💫',
   'downloader': '🌟 DOWNLOAD 🌟',
