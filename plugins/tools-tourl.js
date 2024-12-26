@@ -34,7 +34,7 @@ let handler = async (m, { conn }) => {
         txt += `*⚜️ FILE* : ${q.filename || 'x.jpg'}\n`
         txt += `*⚜️ EXTENSION* : ${api.data.data.image.extension}\n`
         txt += `*⚜️ DELETE* : ${api.data.data.delete_url}\n\n`
-        txt += `*➤ By: ${botname}*`
+        txt += `*➤ By: ${namebot}*`
     await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, fake)
   } else {
     await m.react('✅')
