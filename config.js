@@ -24,6 +24,7 @@ global.prems = []
 global.packname = `[ Sticker Maker`
 global.author = '🌠 Isita Ai WhatsApp Bot ]'
 global.wm = '⛄IsitaBot❤️‍🔥'
+global.namebot = 'IsitaBot'
 global.dev = '© Powered By Isa ❀'
 global.stickauth = `© IsitaBot Ai By Isa`
 global.stickpack = `©️ Powered By Isa`
