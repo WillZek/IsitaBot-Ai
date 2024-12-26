@@ -13,8 +13,7 @@ let link = await catbox(media);
  \`\`\`• ${link}\`\`\`
 📊 *S I Z E :* ${formatBytes(media.length)}
 📛 *E x p i r e d :* "No Expiry Date" 
-🌠 *B o t:* "${namebot} 
-`;
+🌠 *B o t:* "${namebot}`;
 
   await m.reply(caption);
 }
