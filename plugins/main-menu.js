@@ -44,7 +44,7 @@ const defaultMenu = {
 > 「 💫AQUI TIENES MI MENU💫 」\n
 
 ›   ╔──────¤◎¤──────╗
-› ╭━❍☆${botname}☆❍━╮
+› ╭━❍☆ ${namebot} ☆❍━╮
 ›   ╚──────¤◎¤──────╝
 ╭━─━─━─≪𖣘≫─━─━─━╮
 ┃✰ ➬ *Cliente:* %name
