@@ -44,7 +44,7 @@ const defaultMenu = {
 > 「 💫AQUI TIENES MI MENU💫 」\n
 
 ›   ╔──────¤◎¤──────╗
-› ╭━❍☆𝐈𝐒𝐈𝐓𝐀𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮
+› ╭━❍☆${botname}☆❍━╮
 ›   ╚──────¤◎¤──────╝
 ╭━─━─━─≪𖣘≫─━─━─━╮
 ┃✰ ➬ *Cliente:* %name
