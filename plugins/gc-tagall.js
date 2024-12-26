@@ -14,7 +14,7 @@ const oi = `⇢=͟͟͞͞🄰νίऽ૭ : ${pesan}`;
   }
   teks += `╰─┐ • •ㅤ•-ˏˋ✿ˊˎ-• •ㅤ•
         ꒷︶︶꒷︶︶꒷꒦︶✧꒷₊˚\n\n>`
-  teks += ` ${botname}`;
+  teks += ` ${namebot}`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
 };
 handler.help = ['todos <mesaje>'];
