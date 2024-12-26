@@ -24,7 +24,7 @@ global.rcanal = {
     forwardedNewsletterMessageInfo: {
       newsletterJid: "https://www.instagram.com/star.moony_desing",
       serverMessageId: 100,
-      newsletterName: name2,
+      newsletterName: name,
    }, 
    externalAdReply: {
     showAdAttribution: true, 
