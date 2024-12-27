@@ -28,20 +28,16 @@ let handler = async (m, { conn, isRowner }) => {
   }
 };
 
-
 const isImageValid = (buffer) => {
   const magicBytes = buffer.slice(0, 4).toString('hex');
-
 
   if (magicBytes === 'ffd8ffe0' || magicBytes === 'ffd8ffe1' || magicBytes === 'ffd8ffe2') {
     return true;
   }
 
-
   if (magicBytes === '89504e47') {
     return true;
   }
-
 
   if (magicBytes === '47494638') {
     return true;
@@ -68,7 +64,7 @@ function formatBytes(bytes) {
 
 async function catbox(content) {
   const { ext, mime } = (await fileTypeFromBuffer(content)) || {};
-  const blob = new Blob([content.toArrayBuffer()], { type: mime });
+  const blob = new Blob([content], { type: mime }); // Corregido aquí
   const formData = new FormData();
   const randomBytes = crypto.randomBytes(5).toString("hex");
   formData.append("reqtype", "fileupload");
@@ -78,7 +74,7 @@ async function catbox(content) {
     method: "POST",
     body: formData,
     headers: {
-      "User-Agent":
+      "User -Agent":
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
     },
   });
