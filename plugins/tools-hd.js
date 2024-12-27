@@ -2,7 +2,10 @@
 import FormData from "form-data";
 import Jimp from "jimp";
 const handler = async (m, {conn, usedPrefix, command}) => {
- try {   
+ try {  
+
+global.fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./storage/img/catalogo.png'), thumbnail: fs.readFileSync('./storage/img/catalogo.png'), sendEphemeral: true } } }
+ 
 let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
 "https://i.ibb.co/z5RngV2/file.jpg",
 "https://i.ibb.co/RgwnSNH/file.jpg",
