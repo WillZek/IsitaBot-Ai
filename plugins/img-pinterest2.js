@@ -7,7 +7,8 @@ try {
 let { dl_url } = await Starlights.pinterest(text)
 await conn.sendFile(m.chat, dl_url, 'thumbnail.jpg', `*» Resultado* : ${text}`, m, null, rcanal)
 await m.react('✅')
-} catch {
+} catch (error) {
+m.reply(`Error: ${error.message}`)
 await m.react('✖️')
 }}
 handler.help = ['pinterest2 *<búsqueda>*']
