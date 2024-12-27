@@ -22,7 +22,7 @@ if (new Date - global.db.data.users[m.sender].lastmiming < 60000) return conn.re
 
   } catch (error) {
     console.error(error);
-    m.reply('✧ Hubo un error al intentar cambiar el banner.');
+    m.reply(`✧ Hubo un error al intentar cambiar el banner. ${error.message}`);
   }
 };
 
