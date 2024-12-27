@@ -16,7 +16,7 @@ if (new Date - global.db.data.users[m.sender].lastmiming < 60000) return conn.re
     global.miniurl = /storage/img/miniurl.jpg;
     global.catalogo = /storage/img/catalogo.png;  
     global.avatar = /storage/img/avatar_contact.png;
-    global.icono = media;
+    global.icono = storage;
 
     m.reply('❄️ El banner fue actualizado');
 
