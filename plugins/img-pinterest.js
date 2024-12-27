@@ -7,8 +7,8 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 *❖  Pinterest:*  ${text}
 `.trim(), m)
 }
-handler.help = ['pinterest']
+handler.help = ['pinterest2']
 handler.tags = ['img']
-handler.command = ['pinterest'] 
+handler.command = ['pinterest2'] 
 
 export default handler
