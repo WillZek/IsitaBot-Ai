@@ -173,7 +173,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
   await conn.sendMessage(m.chat, { 
-    text: MenuText,
+    text: defaultMenu,
     contextInfo: {
       mentionedJid: [userId],
       externalAdReply: {
