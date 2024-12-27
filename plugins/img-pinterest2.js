@@ -12,7 +12,7 @@ await m.react('✖️')
 }}
 handler.help = ['pinterest2 *<búsqueda>*']
 handler.tags = ['img']
-handler.command = ['pinterest2']
+handler.command = ['pinterest2', 'pin2']
 handler.register = true 
 //handler.estrellas = 3;
 export default handler
