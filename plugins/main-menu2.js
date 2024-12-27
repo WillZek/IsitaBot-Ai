@@ -33,23 +33,13 @@ let tags = {
   'advanced': '💫 ADVANCED 💫',
 }
 
-const defaultMenu = {
+let MenuText = {
   before: `
 > 「 💫AQUI TIENES MI MENU💫 」\n
 
 ›   ╔──────¤◎¤──────╗
 › ╭━❍☆ ${namebot} ☆❍━╮
 ›   ╚──────¤◎¤──────╝
-╭━─━─━─≪𖣘≫─━─━─━╮
-┃✰ ➬ *Cliente:* %name
-┃✰ ➬ *Estrellas:* %limit
-┃✰ ➬ *Nivel:* %level [ %xp4levelup Xp Para Subir De Nivel]
-┃✰ ➬ *Xp:* %exp / %maxexp
-┃✰ ➬ *TotalXp:* %totalexp
- ╰━─━─━─≪𖣘≫─━─━─━╯
-╔──────¤◎¤──────╗
-┋#    🌠   *𝐈 N F O  ‹‹❑ౄ*
-╚──────¤◎¤──────╝
 ╭━─━─━─≪𖣘≫─━─━─━╮
 ┃✰ ➬ *Modo:* %mode
 ┃✰ ➬ *Bot:* [ *${namebot}* ]
