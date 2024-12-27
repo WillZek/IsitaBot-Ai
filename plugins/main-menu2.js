@@ -261,7 +261,7 @@ Lista De Comandos #menu
         renderLargerThumbnail: true
       }
     }
-  }, { quoted: m })
+  }, { quoted: m });
 };
 
 handler.help = ['menu'];
