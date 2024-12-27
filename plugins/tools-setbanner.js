@@ -24,7 +24,7 @@ let handler = async (m, { conn, isRowner }) => {
 
   } catch (error) {
     console.error(error);
-    m.reply('✧ Hubo un error al intentar cambiar el banner.');
+    m.reply(`✧ Hubo un error al intentar cambiar el banner. ${error.message}`);
   }
 };
 
