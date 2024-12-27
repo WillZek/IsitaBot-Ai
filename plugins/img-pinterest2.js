@@ -10,9 +10,9 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}
-handler.help = ['pinterest *<búsqueda>*']
+handler.help = ['pinterest2 *<búsqueda>*']
 handler.tags = ['img']
-handler.command = ['pinterest']
+handler.command = ['pinterest2']
 handler.register = true 
 //handler.estrellas = 3;
 export default handler
