@@ -254,7 +254,7 @@ Lista De Comandos #menu
       externalAdReply: {
         title: botname,
         body: textbot,
-        thumbnailUrl: miniurl,
+        thumbnailUrl: './storage/img/miniurl.jpg',
         sourceUrl: enlace,
         mediaType: 1,
         showAdAttribution: true,
