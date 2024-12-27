@@ -39,6 +39,7 @@ global.namechannel = '𝐓𝐇𝐄 𝐈𝐒𝐈𝐓𝐀𝐁𝐎𝐓-𝐀𝐈 �
 
 global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
 global.miniurl = fs.readFileSync('./storage/img/miniurl.jpg')
+global.avatar = fs.readFileSync('./storage/img/avatar_contact.png')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
