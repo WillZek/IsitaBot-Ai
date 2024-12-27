@@ -171,3 +171,30 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
  readmore: readMore
    }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+
+  await conn.sendMessage(m.chat, { 
+    text: MenuText,
+    contextInfo: {
+      mentionedJid: [userId],
+      externalAdReply: {
+        title: botname,
+        body: textbot,
+        thumbnailUrl: banner,
+        sourceUrl: enlace,
+        mediaType: 1,
+        showAdAttribution: true,
+        renderLargerThumbnail: true
+      }
+    }
+  }, { quoted: m })
+};
+
+handler.help = ['menu'];
+handler.tags = ['main'];
+handler.command = ['menu', 'help'];
+
+export default handler;
+
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
+}
