@@ -189,9 +189,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   }, { quoted: m })
 };
 
-handler.help = ['menu'];
+handler.help = ['menu2'];
 handler.tags = ['main'];
-handler.command = ['menu', 'help'];
+handler.command = ['menu2', 'help2'];
 
 export default handler;
 
