@@ -13,3 +13,22 @@ let handler = async (m, { conn, args }) => {
   let coins = user.coin || 0;
 
   let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://qu.ax/QGAVS.jpg');
+
+let tags = {
+  'anime': '💫 ANIME 💫',
+  'main': '🌟 INFO 🌟',
+  'search': '💫 SEARCH 💫',
+  'rg': '💫 REGISTRO 💫',
+  'sticker': '🌟 STICKER 🌟',
+  'img': '💫 IMAGE 💫',
+  'group': '🌟 GROUPS 🌟',
+  'nable': '💫 ON / OFF 🌟', 
+  'premium': '💫 PREMIUM 💫',
+  'downloader': '🌟 DOWNLOAD 🌟',
+  'tools': '💫 TOOLS 💫',
+  'fun': '🌟 FUN 🌟',
+  'cmd': '🌟 DATABASE 🌟',
+  'owner': '💫 OWNER 💫', 
+  'audio': '🌟 AUDIOS 🌟', 
+  'advanced': '💫 ADVANCED 💫',
+}
