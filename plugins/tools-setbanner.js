@@ -21,7 +21,7 @@ let handler = async (m, { conn, isRowner }) => {
         global.miniurl = '/storage/img/miniurl.jpg';
         global.catalogo = '/storage/img/catalogo.png';  
         global.avatar = '/storage/img/avatar_contact.png';
-        global.icono = storage;
+        global.icono = media;
 
         m.reply('❄️ El banner fue actualizado');
 
