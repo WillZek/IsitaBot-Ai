@@ -16,7 +16,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
   let img = await q.download?.();
   let pr = await remini(img, "enhance");
   conn.sendMessage(m.chat, {image: pr}, {quoted: fkontak});
- } catch {
+ } catch (error) {
  return m.reply(`🚩 Ocurrió un error ${error.message}`);
  }
 };
