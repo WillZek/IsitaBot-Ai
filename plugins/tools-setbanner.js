@@ -14,7 +14,7 @@ if (new Date - global.db.data.users[m.sender].lastmiming < 60000) return conn.re
       return m.reply('🌲 El archivo enviado no es una imagen válida.');
     }
     global.miniurl = /storage/img/miniurl.jpg;
-    global.imagen2 = /Menu2.jpg;  
+    global.catalogo = /storage/img/catalogo.png;  
     global.imagen3 = /Menu3.jpg;
     global.icono = media;
 
