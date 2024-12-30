@@ -14,25 +14,6 @@ let handler = async (m, { conn, args }) => {
 
   let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://qu.ax/QGAVS.jpg');
 
-let tags = {
-  'anime': '💫 ANIME 💫',
-  'main': '🌟 INFO 🌟',
-  'search': '💫 SEARCH 💫',
-  'rg': '💫 REGISTRO 💫',
-  'sticker': '🌟 STICKER 🌟',
-  'img': '💫 IMAGE 💫',
-  'group': '🌟 GROUPS 🌟',
-  'nable': '💫 ON / OFF 🌟', 
-  'premium': '💫 PREMIUM 💫',
-  'downloader': '🌟 DOWNLOAD 🌟',
-  'tools': '💫 TOOLS 💫',
-  'fun': '🌟 FUN 🌟',
-  'cmd': '🌟 DATABASE 🌟',
-  'owner': '💫 OWNER 💫', 
-  'audio': '🌟 AUDIOS 🌟', 
-  'advanced': '💫 ADVANCED 💫',
-}
-
   let MenuText = `𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 ${botname} 
 ᴀǫᴜɪ ᴛɪᴇɴᴇs ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs
 ╭┈ ↷
