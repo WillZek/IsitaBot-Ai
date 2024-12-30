@@ -32,6 +32,7 @@ global.wait = '🌠 *Aɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ... ฅ^•ﻌ�
 global.botname = '[ 𝐈𝐬𝐢𝐭𝐚 𝐀𝐢 𝐖𝐡𝐚𝐬𝐀𝐩𝐩 𝐁𝐨𝐭 ]'
 global.textbot = `Powered By Isa`
 global.listo = '*Aqui tiene ฅ^•ﻌ•^ฅ*'
+global.mss = 'Activense'
 global.banner = 'https://i.ibb.co/s9N9QhG/file.jpg'
 global.namechannel = '𝐓𝐇𝐄 𝐈𝐒𝐈𝐓𝐀𝐁𝐎𝐓-𝐀𝐈 🌠'
 
