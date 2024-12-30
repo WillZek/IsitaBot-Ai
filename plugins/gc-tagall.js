@@ -23,7 +23,9 @@ emoji = '🔱';
   for (const mem of participants) {
     teks += `${emoji} @${mem.id.split('@')[0]}\n`;
   }
-  teks += `└───────⭓`;
+  teks += `└───────⭓\n╰─┐ • • •   -ˏˋ   ̸ ❲  ╰─ · ❳ ₊ˊˎ-  • • •
+. • ◣     ✝︎ ${textbot}        ◢ • .
+◖─────────────────𖥔`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
 
 };
