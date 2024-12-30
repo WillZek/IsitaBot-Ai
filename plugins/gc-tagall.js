@@ -19,7 +19,7 @@ emoji = '🔱';
   }
   const pesan = args.join` `;
   const oi = `${pesan}`;
-  let teks = `*ISITABOT-MD*\n\n *Integrantes :  ${participants.length}* ${oi}\n\n┌──⭓ activense ✨\n`;
+  let teks = `*ISITABOT-MD*\n\n *Integrantes :  ${participants.length}* ${oi}\n\n┌──⭓ ${mss} \n`;
   for (const mem of participants) {
     teks += `${emoji} @${mem.id.split('@')[0]}\n`;
   }
