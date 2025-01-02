@@ -10,7 +10,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
 if (command == 'paudio' || command == 'mp3') {
 if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Enemy Tommoee Profitt`,  m, rcanal, ); 
-await m.react(rwait);
+await m.react('⏰');
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
 const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ *Isita-Bot* 𝐭⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
@@ -31,9 +31,9 @@ const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ *Isita-B
 > 📽️ *Su Audio se está enviando, espere un momento...*`.trim();
 
 await conn.sendMessage(m.chat, {
-image: { url: yt_play[0].thumbnail }, caption: texto1, contextInfo: { externalAdReply: { title: '♡  ͜ ۬︵࣪᷼⏜݊᷼𝘿𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙨⏜࣪᷼︵۬ ͜ ', body: botname, sourceUrl: channel, thumbnail: catalogo }}, quoted: estilo});
+image: { url: yt_play[0].thumbnail }, caption: texto1, contextInfo: { externalAdReply: { title: '♡  ͜ ۬︵࣪᷼⏜݊᷼𝘿𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙨⏜࣪᷼︵۬ ͜ ', body: botname, sourceUrl: canal, thumbnail: catalogo }}, quoted: estilo});
 try {
-await m.react(rwait);
+await m.react('⏰');
 const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${encodeURIComponent(yt_play[0].url)}`;
 const apiResponse = await fetch(apiUrl);
 const delius = await apiResponse.json();
@@ -41,50 +41,50 @@ if (!delius.status) {
 return m.react(error)}
 const downloadUrl = delius.data.download.url;
 await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
-await m.react(done);
+await m.react('✅');
 } catch (e1) {
 try { 
-await m.react(rwait);
+await m.react('⏰');
 let q = '128kbps'
 const yt = await youtubedl(yt_play[0].url).catch(async _ => await youtubedlv2(yt_play[0].url))
 const dl_url = await yt.audio[q].download()
 const ttl = await yt.title
 const size = await yt.audio[q].fileSizeH
 await conn.sendFile(m.chat, dl_url, ttl + '.mp3', null, m, false, { mimetype: 'audio/mp4' })
-await m.react(done);
+await m.react('✅');
 } catch (e2) {
 try {  
-await m.react(rwait); 
+await m.react('⏰'); 
 const downloadUrl = await fetch9Convert(yt_play[0].url); 
 await conn.sendFile(m.chat, downloadUrl, 'audio.mp3', null, m, false, { mimetype: 'audio/mp4' })
-await m.react(done);
+await m.react('✅');
 } catch (e3) {
 try {
-await m.react(rwait);
+await m.react('⏰');
 const downloadUrl = await fetchY2mate(yt_play[0].url);
 await conn.sendFile(m.chat, downloadUrl, 'audio.mp3', null, m, false, { mimetype: 'audio/mp4' })
-await m.react(done);
+await m.react('✅');
 } catch (e4) {
 try {
-await m.react(rwait);
+await m.react('⏰');
 const res = await fetch(`https://api.zenkey.my.id/api/download/ytmp3?apikey=zenkey&url=${yt_play[0].url}`)
 const audioData = await res.json()
 if (audioData.status && audioData.result?.downloadUrl) {
 await conn.sendMessage(m.chat, { audio: { url: audioData.result.downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
-await m.react(done);
+await m.react('✅');
 }} catch (e5) {
 try {
-await m.react(rwait);
+await m.react('⏰');
 let d2 = await fetch(`https://exonity.tech/api/ytdlp2-faster?apikey=adminsepuh&url=${yt_play[0].url}`);
 let dp = await d2.json();
 const audiop = await getBuffer(dp.result.media.mp3);
 const fileSize = await getFileSize(dp.result.media.mp3);
 await conn.sendMessage(m.chat, { audio: { url: audiop }, mimetype: 'audio/mpeg' }, { quoted: m });
-await m.react(done);
+await m.react('✅');
 if (fileSize > LimitAud) return await conn.sendMessage(m.chat, { document: { url: audiop }, mimetype: 'audio.mp3', fileName: `${yt_play[0].title}.mp3` }, { quoted: m });
-await m.react(done);
+await m.react('✅');
 } catch (e) {    
-await m.react(error);
+await m.react('✖️');
 console.log(e);
 }}}}}}}
 
