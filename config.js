@@ -45,6 +45,7 @@ global.avatar = fs.readFileSync('./storage/img/avatar_contact.png')
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.group = 'https://chat.whatsapp.com/ExmoRYykMLSGehQRGIuxHP'
+global.channel = 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
 global.enlace = 'https://www.instagram.com/star.moony_desing'
 global.canal = 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
 
