@@ -41,10 +41,12 @@ buttons: [ */
                 imageMessage: image 
             }),
             nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
-                buttons: [
+                
 {
-"name": "cta_copy",
-"buttonParamsJson": "{\"display_text\":\"Obtener Menu\",\"id\":\"123456789\",\"copy_code\":\".menu "}"
+  "buttons": [
+    {
+      "name": "cta_copy",
+      "buttonParamsJson": "{\"display_text\":\"Obtener Menu\",\"id\":\"123456789\",\"copy_code\":\".menu\"}"
 },
 ]
 })
