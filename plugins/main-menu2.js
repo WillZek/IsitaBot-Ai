@@ -228,21 +228,27 @@ Lista De Comandos #menu
 ╰═════⊹⊱≼≽⊰⊹═════╯
 > © 𝐏𝐨𝐰𝐫𝐞𝐝 𝐁𝐲 (⁎˃ᴗ˂⁎)𝐈𝐒𝐀`.trim();
 
-  await conn.sendMessage(m.chat, { 
+    conn.sendMessage(m.chat, {
     text: MenuText,
-    contextInfo: {
-      mentionedJid: [userId],
-      externalAdReply: {
-        title: botname,
-        body: textbot,
-        thumbnailUrl: banner,
-        sourceUrl: enlace,
-        mediaType: 1,
-        showAdAttribution: true,
-        renderLargerThumbnail: true
+    caption: "1234",
+    footer: botname,
+    buttons: [
+      {
+        buttonId: ".menu",
+        buttonText: {
+          displayText: 'test'
+        }
+      },
+      {
+        buttonId: ".s",
+        buttonText: {
+          displayText: "Hola"
+        }
       }
-    }
-  }, { quoted: m });
+    ],
+    viewOnce: true,
+    headerType: 1,
+  }, { quoted: m }) // Asegúrate de que este sea el tercer argumento
 };
 
 handler.help = ['menu'];
