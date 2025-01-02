@@ -1,11 +1,9 @@
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-let banner = 'https://i.ibb.co/s9N9QhG/file.jpg'
-
-  let txt = `Nose?`
-  conn.sendFile(m.chat, {
-    image: banner,
-    text: txt,
-    caption: "1234",
+let handler = async (m, { conn, args,
+usedPrefix, command }) => {
+  let banner = 'https://i.ibb.co/s9N9QhG/file.jpg';
+  let txt = `Nose?`;
+  
+  conn.sendFile(m.chat, banner, txt, "1234", m, {
     footer: botname,
     buttons: [
       {
@@ -23,7 +21,8 @@ let banner = 'https://i.ibb.co/s9N9QhG/file.jpg'
     ],
     viewOnce: true,
     headerType: 1,
-  }, { quoted: m }) // Asegúrate de que este sea el tercer argumento
+  });
 }
-handler.command = ['test']
-export default handler
+
+handler.command = ['test'];
+export default handler;
