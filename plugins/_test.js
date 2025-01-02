@@ -2,7 +2,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 let banner = 'https://i.ibb.co/s9N9QhG/file.jpg'
 
   let txt = `Nose?`
-  conn.sendMessage(m.chat, {
+  conn.sendFile(m.chat, {
     image: banner,
     text: txt,
     caption: "1234",
