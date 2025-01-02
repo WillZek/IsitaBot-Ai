@@ -59,8 +59,8 @@ deviceListMetadata: {},
 deviceListMetadataVersion: 2
 },
 interactiveMessage: proto.Message.InteractiveMessage.fromObject({
-body: proto.Message.InteractiveMessage.Body.create({text: '*`\Resultados de:\`* ' + `${text}`}),
-footer: proto.Message.InteractiveMessage.Footer.create({text: '_\`ꜱ\` \`ᴘ\` \`-\` \`ꜱ\` \`ᴇ\` \`ᴀ\` \`ʀ\` \`ᴄ\` \`ʜ\`_'}),
+body: proto.Message.InteractiveMessage.Body.create({text: '*`\AQUI TIENES MI:\`* ' + 'Menu'}),
+footer: proto.Message.InteractiveMessage.Footer.create({text: '_\`M\` \`E\` \`N\` \`U\` \`I\` \`S\` \`I\` \`T\` \`A\`_'}),
 header: proto.Message.InteractiveMessage.Header.create({hasMediaAttachment: false}),
 carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({cards: [...push]})
 })
