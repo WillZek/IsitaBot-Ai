@@ -16,7 +16,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         let json = await api.json();
 
         for (let track of json.data) {
-            let image = await createImage(track.image);
+            // Aquí puedes cambiar track.image por un enlace de imagen específico
+            let imageUrl = 'https://tu-enlace-de-imagen.com/imagen.jpg'; // Cambia esto por el enlace que desees
+            let image = await createImage(imageUrl); // Usamos el enlace de imagen en vez de track.image
             await m.react('✅');
 
             push.push({
