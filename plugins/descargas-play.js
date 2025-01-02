@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 import yts from 'yt-search';
 
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) return conn.reply(m.chat, '*\`Ingresa el nombre de lo que quieres buscar\`*', m, rcanal);
+  if (!args[0]) return conn.reply(m.chat, '*\`Ingresa el nombre de lo que quieres buscar\`*', m);
 
   await m.react('🕓');
   try {
@@ -51,9 +51,9 @@ let handler = async (m, { conn, args }) => {
   }
 };
 
-handler.help = ['playop *<texto>*'];
-handler.tags = ['descargas'];
-handler.command = ['playop'];
+handler.help = ['play *<texto>*'];
+handler.tags = ['dl'];
+handler.command = ['play'];
 
 export default handler;
 
