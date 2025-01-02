@@ -229,6 +229,7 @@ Lista De Comandos #menu
 > © 𝐏𝐨𝐰𝐫𝐞𝐝 𝐁𝐲 (⁎˃ᴗ˂⁎)𝐈𝐒𝐀`.trim();
 
     conn.sendMessage(m.chat, {
+    image: banner,
     text: MenuText,
     caption: "1234",
     footer: botname,
