@@ -48,6 +48,6 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 }
 
 handler.command = ['test2', 'bienvenido'];
-handler.group = true;
+handler.group = false;
 
 export default handler;
