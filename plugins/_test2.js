@@ -1,53 +1,82 @@
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'
+const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
-let handler = async (m, { conn, participants, groupMetadata }) => {
-    let ppch = await conn.profilePictureUrl(m.sender, 'image').catch(_ => gataMenu);
-    let name = conn.getName(m.sender);
-    let senderId = m.sender.split('@')[0];
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+if (!text) return m.reply('Ingresa el texto de lo que quieres buscar en Spotify ❤️‍🔥'); 
+await m.react('❄️')
 
-    let txt = `*╭┈⊰* ${groupMetadata.subject} *⊰┈ ✦*\n*┊ 👋 ¡Hola @${senderId}!*\n*┊ 📜 No olvides revisar la descripción del grupo para más detalles.*\n*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈⊰ ✦*\n\n${groupMetadata.desc?.toString() || '¡SIN DESCRIPCIÓN!\n> _*Gata Bot - MD*_ 🌻🐈'}`;
-
-    let buttons = [
-        { buttonId: "/menu", buttonText: { displayText: 'Menú. 🐈' }, type: 1 },
-        { buttonId: "/serbot code", buttonText: { displayText: 'SerBot. 🐱' }, type: 1 }
-    ];
-
-    let fake = {
-        contextInfo: {
-            mentionedJid: [m.sender], 
-            isForwarded: true,
-            externalAdReply: {
-                showAdAttribution: true,
-                title: name,
-                body: gt,
-                mediaUrl: null,
-                description: null,
-                previewType: "PHOTO",
-                thumbnailUrl: ppch,
-                sourceUrl: 'https://github.com/GataNina-Li',
-                mediaType: 1,
-                renderLargerThumbnail: false,
-                mentionedJid: [m.sender] 
-            }
-        },
-        mentionedJid: [m.sender] 
-    };
-
-    let gata = {
-        image: { url: ppch },
-        caption: txt,
-        footer: gt,
-        buttons: buttons,
-        viewOnce: true,
-        headerType: 4,
-        mentions: [m.sender], 
-        ...fake
-    };
-
-    await conn.sendMessage(m.chat, gata, { quoted: null, mentions: [m.sender] });
+try {
+async function createImage(url) {
+const { imageMessage } = await generateWAMessageContent({image: { url }}, {upload: conn.waUploadToServer})
+return imageMessage
 }
 
-handler.command = ['test2', 'bienvenido'];
-handler.group = false;
+let push = [];
+let api = await fetch(`https://deliriussapi-oficial.vercel.app/search/spotify?q=${encodeURIComponent(text)}`);
+let json = await api.json()
 
-export default handler;
+for (let track of json.data) {
+let image = await createImage(track.image)
+
+await m.react('✅')
+/* push.push({
+body: proto.Message.InteractiveMessage.Body.fromObject({
+text: `${track.title} - ${track.artist}`
+}),
+footer: proto.Message.InteractiveMessage.Footer.fromObject({text: `By IsitaBot`}),
+header: proto.Message.InteractiveMessage.Header.fromObject({title: '', hasMediaAttachment: true, imageMessage: image}),
+nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
+buttons: [ */ 
+
+        push.push({
+            body: proto.Message.InteractiveMessage.Body.fromObject({
+                text: `◦ *Título:* ${track.title} \n◦ *Artistas:* ${track.artist} \n◦ *Album:* ${track.album} \n◦ *Duración:* ${track.duration} \n◦ *Popularidad:* ${track.popularity} \n◦ *Fecha:* ${track.publish}`
+            }),
+            footer: proto.Message.InteractiveMessage.Footer.fromObject({
+                text: '' 
+            }),
+            header: proto.Message.InteractiveMessage.Header.fromObject({
+                title: '',
+                hasMediaAttachment: true,
+                imageMessage: image 
+            }),
+            nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
+                buttons: [
+{
+"name": "cta_copy",
+"buttonParamsJson": "{\"display_text\":\"menu\",\"id\":\"123456789\",\"copy_code\":\".menu " + track.url + "\"}"
+},
+]
+})
+});
+}
+
+const msg = generateWAMessageFromContent(m.chat, {
+viewOnceMessage: {
+message: {
+messageContextInfo: {
+deviceListMetadata: {},
+deviceListMetadataVersion: 2
+},
+interactiveMessage: proto.Message.InteractiveMessage.fromObject({
+body: proto.Message.InteractiveMessage.Body.create({text: '*`\Resultados de:\`* ' + `${text}`}),
+footer: proto.Message.InteractiveMessage.Footer.create({text: '_\`ꜱ\` \`ᴘ\` \`-\` \`ꜱ\` \`ᴇ\` \`ᴀ\` \`ʀ\` \`ᴄ\` \`ʜ\`_'}),
+header: proto.Message.InteractiveMessage.Header.create({hasMediaAttachment: false}),
+carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({cards: [...push]})
+})
+}}}, {
+    'quoted': m
+  });
+
+await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
+} catch (error) {
+console.error(error)
+await m.react('✖️')
+await m.reply(m.chat, `error ${error.message}`);
+}}
+
+handler.help = ["spotifysearch"]
+handler.tags = ["search"]
+handler.command = /^(menuss)$/i
+
+export default handler
