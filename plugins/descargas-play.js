@@ -51,6 +51,18 @@ let handler = async (m, { conn, args }) => {
   }
 };
 
+conn.on('button-interaction', async (buttonInteraction) => {
+  const { id, chat } = buttonInteraction;
+
+  if (id.startsWith('.ytmp3')) {
+    const videoUrl = id.split(' ')[1];
+    conn.reply(chat, `Descargando audio de: ${videoUrl}`, buttonInteraction);
+  } else if (id.startsWith('.ytmp4')) {
+    const videoUrl = id.split(' ')[1];
+    conn.reply(chat, `Descargando video de: ${videoUrl}`, buttonInteraction);
+  }
+});
+
 handler.help = ['playop *<texto>*'];
 handler.tags = ['descargas'];
 handler.command = ['playop'];
