@@ -21,7 +21,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     headerType: 1,
   };
 
-  await conn.sendButtonMessage(m.chat, buttonMessage, { quoted: m });
+  await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
 }
 
 handler.command = ['test'];
