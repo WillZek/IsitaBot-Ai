@@ -14,6 +14,7 @@ let { quality, title, download_url, thumbnail } = json.result
 
 await conn.sendMessage(m.chat, { audio: { url: download_url }, caption: null, mimetype: "audio/mpeg" }, { quoted: m })
 } catch (error) {
+m.reply(`Error: ${error.message}`)
 console.error(error)
 }}
 
