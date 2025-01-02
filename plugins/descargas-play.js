@@ -24,7 +24,7 @@ let handler = async (m, { conn, args }) => {
     await conn.sendMessage(m.chat, {
       image: img,
       caption: txt,
-      footer: 'Selecciona una opción',
+      footer: 'Copir El Url, toque unos de los botones + el link(Url)',
       buttons: [
         {
           buttonId: `.ytmp3 https://youtu.be/${video.videoId}`,
