@@ -1,7 +1,7 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   let txt = `Nose?`
   conn.sendMessage(m.chat, {
-    image: menu,
+    image: banner,
     text: txt,
     caption: "1234",
     footer: botname,
