@@ -40,6 +40,11 @@ global.rcanal = {
     }, 
     }
 
+//Reacciones De Comandos.!
+global.rwait = '🕒'
+global.done = '✅'
+global.error = '✖️'
+
 //Enlaces
 var canal =   'https://whatsapp.com/channel/0029Vakpp8h1Hsq5Y5kbF33t'
 var git = 'https://github.com/WillZek'  
