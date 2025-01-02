@@ -24,18 +24,18 @@ let handler = async (m, { conn, args }) => {
     await conn.sendMessage(m.chat, {
       image: img,
       caption: txt,
-      footer: 'Copir El Url, toque unos de los botones + el link(Url)',
+      footer: 'IsitaBot By Isa',
       buttons: [
         {
           buttonId: `.ytmp3 https://youtu.be/${video.videoId}`,
           buttonText: {
-            displayText: `.ytmp3 https://youtu.be/${video.videoId}`,
+            displayText: 'Audio🎧',
           },
         },
         {
           buttonId: `.ytmp4 https://youtu.be/${video.videoId}`,
           buttonText: {
-            displayText: `.ytmp4 https://youtu.be/${video.videoId}`,
+            displayText: 'Video📽️',
           },
         },
       ],
