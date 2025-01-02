@@ -303,7 +303,8 @@ let dp = await d2.json();
 const audiop = await getBuffer(dp.result.media.mp4);
 await conn.sendMessage(m.chat, { document: { url: audiop }, fileName: `${yt_play[0].title}.mp4`, caption: null, thumbnail: yt_play[0].thumbnail, mimetype: 'video/mp4' }, { quoted: m })    
 await m.react(done); 
-} catch (e2) {    
+} catch (e2) { 
+m.reply(`Error: ${e2.message}`)   
 await m.react(error);
 console.log(e2);
 }}}
