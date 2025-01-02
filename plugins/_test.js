@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }
   ];
 
-  const conn.SendButtonMessage = {
+  const conn.sendButtonMessage = {
     image: { url: banner },
     caption: txt,
     footer: botname,
