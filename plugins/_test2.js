@@ -42,7 +42,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                     ]
                 })
             });
-            // Solo mostramos una vez, así que rompemos el ciclo
+
             break; 
         }
 
