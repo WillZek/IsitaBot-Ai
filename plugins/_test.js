@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }
   ];
 
-  const conn.sendButtonMessage = {
+  const buttonMessage = {
     image: { url: banner },
     caption: txt,
     footer: botname,
@@ -21,7 +21,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     headerType: 1,
   };
 
-  await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
+  await conn.sendButtonMessage(m.chat, buttonMessage, { quoted: m });
 }
 
 handler.command = ['test'];
