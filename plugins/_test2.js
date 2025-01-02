@@ -44,7 +44,7 @@ buttons: [ */
                 buttons: [
 {
 "name": "cta_copy",
-"buttonParamsJson": "{\"display_text\":\"menu\",\"id\":\"123456789\",\"copy_code\":\".menu " + :) + "\"}"
+"buttonParamsJson": "{\"display_text\":\"menu\",\"id\":\"123456789\",\"copy_code\":\".menu " + track.url + "xdd"}"
 },
 ]
 })
