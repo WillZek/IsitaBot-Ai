@@ -21,7 +21,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
             push.push({
                 body: proto.Message.InteractiveMessage.Body.fromObject({
-                    text: `◦ *Título:* ${track.title} \n◦ *Artistas:* ${track.artist} \n◦ *Album:* ${track.album} \n◦ *Duración:* ${track.duration} \n◦ *Popularidad:* ${track.popularity} \n◦ *Fecha:* ${track.publish}`
+                    text: `Toca Obtener Menu✨`
                 }),
                 footer: proto.Message.InteractiveMessage.Footer.fromObject({
                     text: ''
