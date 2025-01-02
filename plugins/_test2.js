@@ -11,40 +11,15 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
             return imageMessage;
         }
 
-        let push = [];
         let api = await fetch(`https://deliriussapi-oficial.vercel.app/search/spotify?q=${encodeURIComponent(text)}`);
+        if (!api.ok) throw new Error('Error en la respuesta de la API');
+
         let json = await api.json();
+        if (!json.data || json.data.length === 0) return m.reply('No se encontraron resultados. 😢');
 
-        for (let track of json.data) {
-            // Aquí puedes cambiar track.image por un enlace de imagen específico
-            let imageUrl = 'https://files.catbox.moe/5z2a7k.jpg';
-            let image = await createImage(imageUrl);
-            await m.react('✅');
-
-            push.push({
-                body: proto.Message.InteractiveMessage.Body.fromObject({
-                    text: `Toca Obtener Menu✨`
-                }),
-                footer: proto.Message.InteractiveMessage.Footer.fromObject({
-                    text: ''
-                }),
-                header: proto.Message.InteractiveMessage.Header.fromObject({
-                    title: '',
-                    hasMediaAttachment: true,
-                    imageMessage: image
-                }),
-                nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
-                    buttons: [
-                        {
-                            name: "cta_copy",
-                            buttonParamsJson: "{\"display_text\":\"Obtener Menu\",\"id\":\"123456789\",\"copy_code\":\".menu\"}"
-                        },
-                    ]
-                })
-            });
-
-            break; 
-        }
+        let imageUrl = 'https://files.catbox.moe/5z2a7k.jpg';
+        let image = await createImage(imageUrl);
+        await m.react('✅');
 
         const msg = generateWAMessageFromContent(m.chat, {
             viewOnceMessage: {
@@ -56,9 +31,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                     interactiveMessage: proto.Message.InteractiveMessage.fromObject({
                         body: proto.Message.InteractiveMessage.Body.create({ text: '*`\AQUI TIENES MI:\`* ' + 'Menu' }),
                         footer: proto.Message.InteractiveMessage.Footer.create({ text: '_\`M\` \`E\` \`N\` \`U\` \`I\` \`S\` \`I\` \`T\` \`A\`_'}),
-                        header: proto.Message.InteractiveMessage.Header.create({ hasMediaAttachment: false }),
-                        
-                        carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ cards: [] })
+                        header: proto.Message.InteractiveMessage.Header.create({ hasMediaAttachment: true, imageMessage: image }),
+                     
                     })
                 }
             }
