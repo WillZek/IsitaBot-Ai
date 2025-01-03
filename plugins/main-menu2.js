@@ -231,25 +231,26 @@ Lista De Comandos #menu
 ╰═════⊹⊱≼≽⊰⊹═════╯
 > © 𝐏𝐨𝐰𝐫𝐞𝐝 𝐁𝐲 (⁎˃ᴗ˂⁎)𝐈𝐒𝐀`.trim();
 
-    conn.sendMessage(m.chat, { 
+conn.sendMessage(m.chat, { 
       image: { url: banner }, 
       caption: MenuText, 
       footer: "by Isita", 
       buttons: [
-        { buttonId: ".menu3", buttonText: { displayText: "Logos" } }, 
-        { buttonId: ".s", buttonText: { displayText: "sticker" } }
+        { buttonId: ".precio1", buttonText: { displayText: "hola" } }, 
+        { buttonId: ".menu", buttonText: { displayText: ".s" } }
       ], 
       headerType: 6, 
       viewOnce: true, 
       contextInfo: {
         forwardedNewsletterMessageInfo: { 
-          newsletterJid: '120363368073378190@newsletter', 
+          newsletterJid: '120363382214376298@newsletter', 
           serverMessageId: '', 
-          newsletterName: 'Test Bot'
+          newsletterName: 'Test' 
         }, 
         isForwarded: true
       }
     }, { quoted: m });
+};
 };
 
 handler.help = ['menu'];
