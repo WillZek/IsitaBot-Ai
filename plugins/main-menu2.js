@@ -13,6 +13,8 @@ let handler = async (m, { conn, args }) => {
   let coins = user.coin || 0;
 
   let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://qu.ax/QGAVS.jpg');
+  
+   let banner = 'https://i.ibb.co/s9N9QhG/file.jpg';
 
   let MenuText = `𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 ${botname} 
 ᴀǫᴜɪ ᴛɪᴇɴᴇs ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs
@@ -228,28 +230,25 @@ Lista De Comandos #menu
 ╰═════⊹⊱≼≽⊰⊹═════╯
 > © 𝐏𝐨𝐰𝐫𝐞𝐝 𝐁𝐲 (⁎˃ᴗ˂⁎)𝐈𝐒𝐀`.trim();
 
-    conn.sendMessage(m.chat, {
-    image: banner,
-    text: MenuText,
-    caption: "1234",
-    footer: botname,
-    buttons: [
-      {
-        buttonId: ".menu",
-        buttonText: {
-          displayText: 'test'
-        }
-      },
-      {
-        buttonId: ".s",
-        buttonText: {
-          displayText: "Hola"
-        }
+    conn.sendMessage(m.chat, { 
+      image: { url: banner }, 
+      caption: MenuText, 
+      footer: "by Isita", 
+      buttons: [
+        { buttonId: ".precio1", buttonText: { displayText: "hola" } }, 
+        { buttonId: ".menu", buttonText: { displayText: ".s" } }
+      ], 
+      headerType: 6, 
+      viewOnce: true, 
+      contextInfo: {
+        forwardedNewsletterMessageInfo: { 
+          newsletterJid: '120363382214376298@newsletter', 
+          serverMessageId: '', 
+          newsletterName: 'Probando' 
+        }, 
+        isForwarded: true
       }
-    ],
-    viewOnce: true,
-    headerType: 1,
-  }, { quoted: m }) // Asegúrate de que este sea el tercer argumento
+    }, { quoted: m });
 };
 
 handler.help = ['menu'];
