@@ -14,8 +14,8 @@ const imageUrl = 'https://i.ibb.co/x5w5CHk/file.jpg'; // Cambia esta URL por la 
       caption: message, 
       footer: "by IsitaBot", 
       buttons: [
-        { buttonId: ".p2", buttonText: { displayText: "precios2" } }, 
-        { buttonId: ".p3", buttonText: { displayText: "precios3" } }
+        { buttonId: ".p2", buttonText: { displayText: ".precios2" } }, 
+        { buttonId: ".p3", buttonText: { displayText: ".precios3" } }
       ], 
       headerType: 6, 
       viewOnce: true, 
