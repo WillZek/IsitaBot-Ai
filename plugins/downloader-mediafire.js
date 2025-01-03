@@ -23,7 +23,7 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
                         mediaType: 2,
                         description: `Sigueme En Instagram`,
                         title: `👑 Gracias Por Usar A IsitaBot, WhatsApp Bot⛄`,
-                        body: `🎄 Powered By WillZek`,          previewType: 0,
+                        body: `🎄 Powered By Isa`,          previewType: 0,
                         thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
                         mediaUrl: canal
 
@@ -45,8 +45,8 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
                         sourceUrl: 'https://www.instagram.com/star.moony_desing',
                         mediaType: 2,
                         description: `❤️‍🔥Sigueme En Instagram ❤️‍🔥`,
-                        title: `❄️ Gracias Por Usar IsitaBot, Sigue El Canal⛄`,
-                        body: `🎄 Powered By WillZek`,          previewType: 0,
+                        title: `❄️ Gracias Por Usar IsitaBot⛄`,
+                        body: `🎄 Powered By Isa`,          previewType: 0,
                         thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
                         mediaUrl: canal
 
@@ -54,7 +54,7 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
 })
       await conn.sendFile(m.chat, link, name, '', m, null, {mimetype: mime, asDocument: true});
     } catch {
-      await m.reply(`*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> *Powered By WillZek*`);
+      await m.reply(`*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> *Powered By Isa*`);
     }
   }
 };
