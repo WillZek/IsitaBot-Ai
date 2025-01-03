@@ -32,6 +32,6 @@ const imageUrl = 'https://i.ibb.co/x5w5CHk/file.jpg'; // Cambia esta URL por la 
 }
 handler.help = ['precios1'];
 handler.tags = ['main'];
-handler.group = true;
+handler.group = false;
 handler.command = ['precios1', 'p1'];
 export default handler;
