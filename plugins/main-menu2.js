@@ -236,14 +236,14 @@ Lista De Comandos #menu
       caption: MenuText, 
       footer: "by Isita", 
       buttons: [
-        { buttonId: ".precio1", buttonText: { displayText: "hola" } }, 
-        { buttonId: ".menu", buttonText: { displayText: ".s" } }
+        { buttonId: ".menu3", buttonText: { displayText: "Logos" } }, 
+        { buttonId: ".s", buttonText: { displayText: "sticker" } }
       ], 
       headerType: 6, 
       viewOnce: true, 
       contextInfo: {
         forwardedNewsletterMessageInfo: { 
-          newsletterJid: '120363382214376298@newsletter', 
+          newsletterJid: '120363368073378190@newsletter', 
           serverMessageId: '', 
           newsletterName: name
         }, 
