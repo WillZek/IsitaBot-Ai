@@ -21,7 +21,7 @@ const imageUrl = 'https://i.ibb.co/x5w5CHk/file.jpg'; // Cambia esta URL por la 
       viewOnce: true, 
       contextInfo: {
         forwardedNewsletterMessageInfo: { 
-          newsletterJid: '120363382214376298@newsletter', 
+          newsletterJid: 'https://www.instagram.com/star.moony_desing', 
           serverMessageId: '', 
           newsletterName: 'IsitaBot' 
         }, 
