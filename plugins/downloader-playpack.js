@@ -38,7 +38,7 @@ const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${enc
 const apiResponse = await fetch(apiUrl);
 const delius = await apiResponse.json();
 if (!delius.status) {
-return m.react(error)}
+return m.react('✖️')}
 const downloadUrl = delius.data.download.url;
 await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
 await m.react('✅');
