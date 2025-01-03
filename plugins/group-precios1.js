@@ -9,7 +9,25 @@ if (m.isGroup) {
 const imageUrl = 'https://i.ibb.co/x5w5CHk/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
 // Envía el mensaje
 // Envía la imagen
-await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' });
+    conn.sendMessage(m.chat, { 
+      image: { url: imageUrl }, 
+      caption: message, 
+      footer: "by IsitaBot", 
+      buttons: [
+        { buttonId: ".p2", buttonText: { displayText: "precios2" } }, 
+        { buttonId: ".p3", buttonText: { displayText: "precios3" } }
+      ], 
+      headerType: 6, 
+      viewOnce: true, 
+      contextInfo: {
+        forwardedNewsletterMessageInfo: { 
+          newsletterJid: '120363382214376298@newsletter', 
+          serverMessageId: '', 
+          newsletterName: 'IsitaBot' 
+        }, 
+        isForwarded: true
+      }
+    }, { quoted: m });
 }
 }
 handler.help = ['precios1'];
