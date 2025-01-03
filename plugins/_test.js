@@ -4,7 +4,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let txt = `Nose?`;
 
     conn.sendMessage(m.from, { 
-      image: { url: banner, 
+      image: { url: banner }, 
       caption: "nazi bot muaaajjjj", 
       footer: "by nazi", 
       buttons: [
