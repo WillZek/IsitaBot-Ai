@@ -231,13 +231,13 @@ Lista De Comandos #menu
 ╰═════⊹⊱≼≽⊰⊹═════╯
 > © 𝐏𝐨𝐰𝐫𝐞𝐝 𝐁𝐲 (⁎˃ᴗ˂⁎)𝐈𝐒𝐀`.trim();
 
-conn.sendMessage(m.chat, { 
+    conn.sendMessage(m.chat, { 
       image: { url: banner }, 
       caption: MenuText, 
-      footer: "by Isita", 
+      footer: "by Isa", 
       buttons: [
-        { buttonId: ".precio1", buttonText: { displayText: "hola" } }, 
-        { buttonId: ".menu", buttonText: { displayText: ".s" } }
+        { buttonId: ".menu3", buttonText: { displayText: "hola" } }, 
+        { buttonId: ".s", buttonText: { displayText: "bye" } }
       ], 
       headerType: 6, 
       viewOnce: true, 
@@ -245,7 +245,7 @@ conn.sendMessage(m.chat, {
         forwardedNewsletterMessageInfo: { 
           newsletterJid: '120363382214376298@newsletter', 
           serverMessageId: '', 
-          newsletterName: 'Test' 
+          newsletterName: 'Test Bot' 
         }, 
         isForwarded: true
       }
