@@ -245,7 +245,7 @@ Lista De Comandos #menu
         forwardedNewsletterMessageInfo: { 
           newsletterJid: '120363368073378190@newsletter', 
           serverMessageId: '', 
-          newsletterName: name,
+          newsletterName: '𝐈𝐬𝐢𝐭𝐚𝐁𝐨𝐭 - 𝐀𝐢'
         }, 
         isForwarded: true
       }
