@@ -1,4 +1,4 @@
-let handler = async (m, { conn, isAdmin, isROwner} ) => {
+let handler = async (m, { conn, isAdmin, isROwner, args } ) => {
     if (!(isAdmin || isROwner)) return dfail('admin', m, conn)
     if (args[0] == 'on') {
     global.db.data.chats[m.chat].isBanned = false
