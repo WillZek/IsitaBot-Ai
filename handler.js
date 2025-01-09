@@ -128,8 +128,6 @@ chat.modoadmin = false
         if (typeof m.text !== 'string')
             m.text = ''
 
-let adminMode = global.db.data.chats[m.chat].modoadmin
-
         let _user = global.db.data && global.db.data.users && global.db.data.users[m.sender]
 
         const isROwner = [conn.decodeJid(global.conn.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -254,6 +252,12 @@ conn: this,
                     if (name != 'owner-unbanbot.js' && setting?.banned)
                         return
                 }
+
+let adminMode = global.db.data.chats[m.chat].modoadmin
+let mini = `${plugins.botAdmin || plugins.admin || plugins.group || plugins || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugins.command}`
+
+if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && mini) return   
+
                 if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { 
                     fail('owner', m, this)
                     continue
