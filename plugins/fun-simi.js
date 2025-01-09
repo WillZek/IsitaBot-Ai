@@ -26,5 +26,5 @@ const handler = async (m, {text, command, args, usedPrefix}) => {
 };
 handler.help = ['simi']
 handler.tags = ['fun'];
-handler.command = /^((sim)?simi|alexa|isa|bot)$/i;
+handler.command = /^((sim)?simi|alexa|isita|bot)$/i;
 export default handler;
