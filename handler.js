@@ -128,6 +128,7 @@ chat.modoadmin = false
         if (typeof m.text !== 'string')
             m.text = ''
 
+let adminMode = global.db.data.chats[m.chat].modoadmin
 
         let _user = global.db.data && global.db.data.users && global.db.data.users[m.sender]
 
