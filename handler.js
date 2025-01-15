@@ -411,7 +411,7 @@ if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && mini) return
   }
 }
 
-global.dfail = (type, m, conn, usedPrefix) => {
+global.dfail = (type, m, conn) => {
     let msg = {
         rowner: "> _*`Perdon, Este comando es solo para mi Owner.`*_",
         owner: "> _*`Perdon, Solo mi creador puede usar este comando.`*_",
