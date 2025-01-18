@@ -424,7 +424,7 @@ global.dfail = (type, m, conn) => {
         unreg: "> _*`‼️USUARIO NO REGISTRADO‼️`*_\n\n`Para registrarse:`\n\n> .reg nombre.edad\n\n`Ejemplo:`\n\n> .reg Isa.18",
         restrict: "> _*`Comando desactivado por mi Owner`*_" 
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))
+    if (msg) return conn.reply(m.chat, msg, m).then(_ => m.react('✖️'))
 }
 
 let file = global.__filename(import.meta.url, true)
