@@ -15,12 +15,14 @@ export async function before(m, {conn, participants, groupMetadata}) {
 await conn.sendAi(m.chat, botname, textbot, bienvenida, img, img, canal, estilo)
   }
 
+  const despMessage = global.db.data.chats[m.chat]?.despMessage || '"Se Fue';
+
   if (chat.bienvenida && m.messageStubType == 28) {
-    let bye = `┌─★ *${namebot}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let bye = `┌─★ *${namebot}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑ ${despMessage}\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 await conn.sendAi(m.chat, botname, textbot, bye, img, img, canal, estilo)
   }
 
   if (chat.bienvenida && m.messageStubType == 32) {
-    let kick = `┌─★ *${namebot}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let kick = `┌─★ *${namebot}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑ ${despMessage}\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 await conn.sendAi(m.chat, botname, textbot, kick, img, img, canal, estilo)
 }}
