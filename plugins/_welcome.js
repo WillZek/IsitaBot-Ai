@@ -7,8 +7,10 @@ export async function before(m, {conn, participants, groupMetadata}) {
   let img = await (await fetch(`${pp}`)).buffer()
   let chat = global.db.data.chats[m.chat]
 
+  const welcomeMessage = global.db.data.chats[m.chat]?.welcomeMessage || 'Bienvenido/a :';
+
   if (chat.bienvenida && m.messageStubType == 27) {
-    let bienvenida = `┌─★ *${namebot}* \n│「 Bienvenido 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Bienvenido a\n   │✑  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
+    let bienvenida = `┌─★ *${namebot}* \n│「 Bienvenido 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑ ${welcomeMessage}\n   │✑  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
 
 await conn.sendAi(m.chat, botname, textbot, bienvenida, img, img, canal, estilo)
   }
