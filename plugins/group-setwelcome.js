@@ -1,13 +1,30 @@
-let handler = async (m, { conn, text, isROwner, isOwner, isAdmin, usedPrefix, command }) => {
-  if (text) {
-    global.db.data.chats[m.chat].sWelcome = text
-    m.reply('mensaje de bienvenida configurado con éxito\n@user (Mención)\n@subject (Nombre del grupo)\n@desc (Descripción)')
-  } else throw m.reply(`¿Y el texto?\n\nEjemplo:\n${usedPrefix + command} ¡Hola, @user!\nBienvenido al grupo @subject\n\n@desc`)
-}
-handler.help = ['setwelcome <txt>']
-handler.tags = ['group']
-handler.command = /^(setwelcome|setw)$/i
-handler.group = true
-handler.admin = true
+/* Código Hecho Por WillZek para CrowBot
+- Tienen Que Definir El welcomeMessage también en el _welcome.js o no funcionará 
+- también tienen que agregar ${welcomeMessage} en el mensaje de bienvenida, eso sí, las comillas son `
+- Espero Les Funcione uwu 
+*/
 
-export default handler
+let handler = async (m, { conn, text, isRowner }) => {
+  if (!text) {
+    return m.reply('🎩 Debes proporcionar el mensaje de bienvenida después del comando. Ejemplo: `.setwelcome ¡Bienvenido al grupo!`');
+  }
+
+  const welcomeMessage = text.trim();
+
+  try {
+    global.db.data.chats[m.chat].welcomeMessage = welcomeMessage;
+
+    m.reply(`🎩 El mensaje de bienvenida del grupo ha sido actualizado correctamente a: ${welcomeMessage}`);
+  } catch (error) {
+    console.error(error);
+    m.reply('🎩 Hubo un error al intentar cambiar el mensaje de bienvenida.');
+  }
+};
+
+handler.help = ['setwelcome *<mensaje>*'];
+handler.tags = ['grupo'];
+handler.command = ['setwelcome', 'setwel'];
+handler.admin = true;
+handler.group = true;
+
+export default handler;
