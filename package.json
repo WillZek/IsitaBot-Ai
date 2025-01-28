@@ -47,6 +47,7 @@
         "@whiskeysockets/baileys": "github:ds6/bails",
         "@xct007/frieren-scraper": "^0.0.2",
         "google-libphonenumber": "latest",
+        "@StarlightsTeam/Scraper": "github:StarlightsTeam/StarlightsTeam-Scraper",
         "acrcloud": "^1.4.0",
         "adm-zip": "^0.5.16",
         "api-dylux": "^1.8.5",
