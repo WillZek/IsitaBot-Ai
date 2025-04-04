@@ -2,11 +2,10 @@ let handler = async (m, { groupMetadata, command, conn, usedPrefix }) => {
   let user = a => '@' + a.split('@')[0];
   let ps = groupMetadata.participants.map(v => v.id);
 
-/* if (!ps || ps.length < 10) {
+if (!ps || ps.length < 10) {
     m.reply('🌷 No hay suficientes participantes en el grupo para generar un top 10.');
     return;
   }
-*/
 
   const getRandomUser = (used = []) => {
     if (used.length >= ps.length) {
