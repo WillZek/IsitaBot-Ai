@@ -1,4 +1,4 @@
-let handler = async (m, { groupMetadata, command, conn, usedPrefix }) => {
+/* let handler = async (m, { groupMetadata, command, conn, usedPrefix }) => {
   let user = a => '@' + a.split('@')[0];
   let ps = groupMetadata.participants.map(v => v.id);
 
@@ -75,8 +75,8 @@ export default handler;
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
+*/ 
 
-/*
 let handler = async(m, { groupMetadata, command, conn, usedPrefix }) => {
 let user = a => '@' + a.split('@')[0]
 let ps = groupMetadata.participants.map(v => v.id)
@@ -118,4 +118,3 @@ export default handler;
 
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}
-*/
