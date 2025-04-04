@@ -30,9 +30,10 @@ let top = `*${x} Top 10 Gay ${x}*
 
 conn.sendMessage(m.chat, { audio: { url: vn }, { quoted: m });
 }
-handler.help = handler.command = ['topgay']
-handler.tags = ['fun']
+
+handler.command = ['topgay'];
 handler.group = true
-export default handler
+export default handler;
+
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}
