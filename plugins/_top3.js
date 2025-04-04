@@ -1,4 +1,5 @@
 let handler = async(m, { groupMetadata, command, conn, usedPrefix, participants }) => {
+let user = a => '@' + a.split('@')[0]
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
 let b = ps.getRandom()
