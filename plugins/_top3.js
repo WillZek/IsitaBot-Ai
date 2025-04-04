@@ -29,7 +29,7 @@ let top = `*${l} Top 10 Gay ${l}*
 *10. ${user(j)}*`
 //m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 
-conn.sendMessage(m.chat, { audio: { url: vn }, { quoted: m });
+await conn.sendMessage(m.chat, { audio: { url: vn }, caption: null, mimetype: "audio/mpeg" }, { quoted: m })
 }
 
 handler.command = ['topgay'];
