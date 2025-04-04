@@ -14,7 +14,7 @@ let j = ps.getRandom()
 let k = Math.floor(Math.random() * 70);
 let x = `${pickRandom(['🤓','😅','😂','😳','😎', '🥵', '😱', '🤑', '🙄', '💩','🍑','🤨','🥴','🔥','👇🏻','😔', '👀','🌚','🗿', '😹'])}`
 let l = Math.floor(Math.random() * x.length);
-let vn = `https://files.catbox.moe/r7qi4i.mp3`
+let vn = 'https://cdnmega.vercel.app/media/xpIigC4A@ddSThmSRxbJwzF4rmT6BVtmP7R-qUe5Cj_vBsOxyvxc';
 let top = `*${l} Top 10 Gay ${l}*
     
 *1. ${user(a)}*
