@@ -1,4 +1,4 @@
-let handler = async(m, { groupMetadata, command, conn, usedPrefix }) => {
+let handler = async(m, { groupMetadata, command, conn, usedPrefix, participants }) => {
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
 let b = ps.getRandom()
