@@ -1,8 +1,3 @@
-import util from 'util'
-import path from 'path'
-// let user = a => '@' + a.split('@')[0]
-// function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
-
 let handler = async(m, { groupMetadata, command, conn, usedPrefix}) {
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
