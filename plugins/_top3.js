@@ -30,7 +30,7 @@ let top = `*${x} Top 10 Gay ${x}*
 //m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 
 await conn.sendMessage(m.chat, { audio: { url: vn }, caption: null, mimetype: "audio/mpeg" }, { quoted: m })
-m.reply(top);
+m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]});
 }
 
 handler.command = ['topgay'];
