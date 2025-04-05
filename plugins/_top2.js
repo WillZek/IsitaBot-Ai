@@ -19,7 +19,7 @@ let vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`
 let top = `*${x} Top Parejas ${x}*
 *Parejas #1:*   
 *1. ${user(a)}*
-*2. ${user(b)}*`
+*2. ${user(b)}*
 
 *Parejas #2*
 *3. ${user(c)}*
