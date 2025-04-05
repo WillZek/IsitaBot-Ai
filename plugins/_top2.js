@@ -1,9 +1,9 @@
 import util from 'util'
 import path from 'path'
-let user = a => '@' + a.split('@')[0]
-let handler = async(m, { groupMetadata, command, conn, text, usedPrefix}) {
-// if (!text) return m.reply(`Ejemplo de uso:\n.top *texto*`)
 
+let handler = async(m, { groupMetadata, command, conn, text, usedPrefix}) {
+
+let user = a => '@' + a.split('@')[0]
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
 let b = ps.getRandom()
