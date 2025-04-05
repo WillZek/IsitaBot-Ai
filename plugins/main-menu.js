@@ -238,7 +238,7 @@ _*𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒*_
 
 let img = './storage/img/miniurl.jpg';
 
-conn.sendMessage(m.chat, { image: { url: img }, caption: menu }, { quoted: m });
+await conn.sendMessage(m.chat, { image: { url: img }, caption: menu }, { mimetype: 'image/jpeg' });
 }
 
 handler.command = ['menu'];
