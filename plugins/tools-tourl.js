@@ -1,27 +1,39 @@
-import uploadFile from '../lib/uploadFile.js';
-import upload from '../lib/uploadFile2.js';
-import uploadImage from '../lib/uploadImage.js';
+import uploadFile from '../lib/uploadFile.js'
+import uploadImage from '../lib/uploadImage.js'
 import fetch from 'node-fetch'
-const handler = async (m) => {
-const q = m.quoted ? m.quoted : m;
-const mime = (q.msg || q).mimetype || '';
-if (!mime) return conn.reply(m.chat, `${emoji} Por favor, responda a una *Imagen* o *Vídeo.*`, m)
-const media = await q.download();
-try {
-let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
-let link = await (isTele ? uploadImage : uploadFile)(media)
-m.reply(`${await shortUrl(link)}`)
-} catch (e) {
-try {    
-const isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime);
-const link = await (isTele ? uploadImage : uploadFile)(media);
-m.reply(link);
-} catch (e) {
-console.log(e) 
-}}}
+
+let handler = async (m) => {
+  let q = m.quoted ? m.quoted : m
+  let mime = (q.msg || q).mimetype || ''
+  if (!mime) return conn.reply(m.chat, '🍿 Responde a una Imagen', m)
+  await m.react(rwait)
+  try {
+  /*conn.reply(m.chat, '🚩 Convirtiendo la imagen en url...', m, {
+  contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
+  title: packname,
+  body: dev,
+  previewType: 0, thumbnail: icons,
+  sourceUrl: channel }}})*/
+  let media = await q.download()
+  let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
+  let link = await (isTele ? uploadImage : uploadFile)(media)
+  let img = await (await fetch(`${link}`)).buffer()
+  let txt = `  *ゲ◜៹ Bot Enlace ៹◞ゲ*  \n\n`
+      txt += `› Enlace : ${link}\n`
+      txt += `› Acortado : ${await shortUrl(link)}\n`
+      txt += `› Tamaño : ${formatBytes(media.length)}\n`
+      txt += `› Expiración : ${isTele ? 'No expira' : 'Desconocido'}\n\n`
+      txt += `> *🌵 Desarrollado por Daniel*`
+
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
+await m.react(done)
+} catch {
+await conn.reply(m.chat, '🌱 Ocurrió un error', m, fake)
+await m.react(error)
+}}
 handler.help = ['tourl']
-handler.tags = ['herramientas']
-handler.command = /^(tourl|upload)$/i
+handler.tags = ['transformador']
+handler.command = ['tourl', 'upload']
 export default handler
 
 function formatBytes(bytes) {
