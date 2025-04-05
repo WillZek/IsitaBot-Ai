@@ -77,7 +77,9 @@ function pickRandom(list) {
 }
 */ 
 
-let handler = async(m, { groupMetadata, command, conn, usedPrefix }) => {
+let handler = async(m, { groupMetadata, command, conn, usedPrefix, args }) => {
+
+if (args[0] === 'gay' || args[0] === 'gays') {
 let user = a => '@' + a.split('@')[0]
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
@@ -110,9 +112,9 @@ let top = `*${x} Top 10 Gay ${x}*
 
 await conn.sendMessage(m.chat, { audio: { url: vn }, caption: null, mimetype: "audio/mpeg" }, { quoted: m })
 m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]});
-}
+}}
 
-handler.command = ['topgay', 'topgays'];
+handler.command = ['topgay', 'topgays', 'top'];
 handler.group = true
 export default handler;
 
