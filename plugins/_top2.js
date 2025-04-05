@@ -17,14 +17,19 @@ let x = `${pickRandom(['❤️', '🌷', '💖', '🫦', '👨‍❤️‍💋�
 let l = Math.floor(Math.random() * x.length);
 let vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`
 let top = `*${x} Top Parejas ${x}*
-    
+*Parejas #1:*   
 *1. ${user(a)}*
 *2. ${user(b)}*`
 
-/* *3. ${user(c)}*
+*Parejas #2*
+*3. ${user(c)}*
 *4. ${user(d)}*
+
+*Parejas #3*
 *5. ${user(e)}*
-*6. ${user(f)}*
+*6. ${user(f)}*`
+
+/*
 *7. ${user(g)}*
 *8. ${user(h)}*
 *9. ${user(i)}*
