@@ -32,6 +32,27 @@ let top = `*${x} Top 10 ${text} ${x}*
 *10. ${user(j)}*`
 m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 }
+
+if (args[0] == 'gay') {
+let vn = 'https://cdnmega.vercel.app/media/xpIigC4A@ddSThmSRxbJwzF4rmT6BVtmP7R-qUe5Cj_vBsOxyvxc';
+let top = `*${x} Top 10 Gay ${x}*
+    
+*1. ${user(a)}*
+*2. ${user(b)}*
+*3. ${user(c)}*
+*4. ${user(d)}*
+*5. ${user(e)}*
+*6. ${user(f)}*
+*7. ${user(g)}*
+*8. ${user(h)}*
+*9. ${user(i)}*
+*10. ${user(j)}*`
+//m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
+
+await conn.sendMessage(m.chat, { audio: { url: vn }, caption: null, mimetype: "audio/mpeg" }, { quoted: m })
+m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]});
+}}
+
 handler.help = handler.command = ['top']
 handler.tags = ['fun']
 handler.group = true
