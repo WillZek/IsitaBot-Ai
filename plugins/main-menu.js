@@ -164,22 +164,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
    }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    let pp = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp2 = 'https://i.ibb.co/9WrytGt/file.jpg'
-    let pp3 = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp4 = 'https://i.ibb.co/9WrytGt/file.jpg'
-    let pp5 = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp6 = 'https://i.ibb.co/9WrytGt/file.jpg'
-    let pp7 = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp8 = 'https://i.ibb.co/9WrytGt/file.jpg'
-    let pp9 = 'https://i.ibb.co/JmcS3kv/Sylph.jpg'
-    let pp10 = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp11 = 'https://i.ibb.co/JmcS3kv/Sylph.jpg'
-    let pp12 = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp13 = 'https://i.ibb.co/Cs6Tt9V/Sylph.jpg'
-    let pp14 = 'https://i.ibb.co/JmcS3kv/Sylph.jpg'
-    let pp15 = 'https://i.ibb.co/Cs6Tt9V/Sylph.jpg'
-    let imgg = 'https://i.ibb.co/s9N9QhG/file.jpg'
     await m.react('🌠')
 
 let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
