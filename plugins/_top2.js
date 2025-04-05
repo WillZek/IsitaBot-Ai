@@ -27,14 +27,8 @@ let top = `*${x} Top Parejas ${x}*
 
 *Parejas #3*
 *5. ${user(e)}*
-*6. ${user(f)}*`
+*6. ${user(f)}*`.trim();
 
-/*
-*7. ${user(g)}*
-*8. ${user(h)}*
-*9. ${user(i)}*
-*10. ${user(j)}*
-*/
 m.reply(top, null, { mentions: [a, b]})
 }
 handler.help = handler.command = ['parejastop', 'topparejas']
