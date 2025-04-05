@@ -35,10 +35,9 @@ await m.react('💫')
 handler.help = ['tiktok'].map((v) => v + ' *<link>*')
 handler.tags = ['descargas']
 handler.command = /^ttk|tiktok|ttdl$/i
-handler.estrellas = 5;
 handler.disable = false
 handler.register = true
-handler.limit = true
+handler.limit = 5;
 
 export default handler
 
