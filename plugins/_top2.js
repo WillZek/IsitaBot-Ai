@@ -31,9 +31,11 @@ let top = `*${x} Top Parejas ${x}*
 
 m.reply(top, null, { mentions: [a, b, c, d, e, f]})
 }
-handler.help = handler.command = ['parejastop', 'topparejas']
+
+handler.command = ['parejastop', 'topparejas']
 handler.tags = ['fun']
 handler.group = true
 export default handler
+
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}
