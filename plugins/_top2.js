@@ -18,20 +18,28 @@ let l = Math.floor(Math.random() * x.length);
 let vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`
 let top = `*${x} Top Parejas ${x}*
 *Parejas #1:*   
-*1. ${user(a)}*
-*2. ${user(b)}*
+${user(a)}
+${user(b)}
 
 *Parejas #2*
-*3. ${user(c)}*
-*4. ${user(d)}*
+${user(c)}
+${user(d)}
 
 *Parejas #3*
-*5. ${user(e)}*
-*6. ${user(f)}*`.trim();
+${user(e)}
+${user(f)}
+
+*Parejas #4*
+${user(g)}
+${user(h)}
+
+*Parejas #5*
+${user(i)}
+${user(j)}`.trim();
 
 let img = 'https://cdnmega.vercel.app/media/ElxGEJKS@sxtjp-OBd2ThNjqhx5BELk1eFRpV_CZNWCo3DSNNXXk';
 
-// m.reply(top, null, { mentions: [a, b, c, d, e, f]})
+// m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: top, mentions: [a, b, c, d, e, f] }, { quoted: m });
 }
