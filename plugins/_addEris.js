@@ -26,15 +26,15 @@ let handler = async (m, { conn, text }) => {
     let users = global.db.data.users;
     if (!users[who]) return m.reply('⚠️ El usuario no existe en la base de datos.');
 
-    users[who].estrellas += dmt;
+    users[who].limit += dmt;
 
 let name = conn.getName(who);
         await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a \`${name || 'Sin Nombre'}\`.\n> Ahora tiene *¥${users[who].estrellas} Eris* en el banco.`, m);
 }
 
-handler.help = ['addestrellas *<@user>* <cantidad>']
+handler.help = ['adderis *<@user>* <cantidad>']
 handler.tags = ['owner'];
-handler.command = ['addestrellas', 'addes']
+handler.command = ['adderis', 'adderiss']
 handler.mods = true
 
 export default handler
