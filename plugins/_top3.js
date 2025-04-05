@@ -112,7 +112,7 @@ await conn.sendMessage(m.chat, { audio: { url: vn }, caption: null, mimetype: "a
 m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]});
 }
 
-handler.command = ['topgay'];
+handler.command = ['topgay', 'topgays'];
 handler.group = true
 export default handler;
 
