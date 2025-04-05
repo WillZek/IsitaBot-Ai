@@ -1,13 +1,11 @@
 let handler = async(m, { conn, command, usedPrefix }) => {
 
 let totalreg = Object.keys(global.db.data.users).length
-let { exp, limit, level } = global.db.data.users[m.sender];
-let mode = global.opts["self"] ? "Privado" : "Publico";
 
 const menu = `> ᰔᩚ Hola! ${conn.getName(m.sender)}, Soy *${botname}*, Aquí tienes la lista de comandos. *(˶ᵔ ᵕ ᵔ˶)*
 
 ╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
-│✧ Modo » ${mode} 
+│✧ Modo » Privado
 │✦ Bot » Principal 🅥
 │✰ Usuarios » ${totalreg}
 │⚘ Versión » ^1.5.0
