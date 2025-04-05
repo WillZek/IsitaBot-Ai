@@ -68,7 +68,7 @@ const defaultMenu = {
 *✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧*\n\n> Para Ser Un Sub Bots Usa #code para codigo de 8 dígitos y #qr para codigo qr.
 
 \t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
-`.trimStart(),
+`.trim(),
   header: '╭═════⊹⊱≼「 *%category* 」≽⊰⊹════•',
   body: '┃➤› 🌠 . %cmd %islimit %isPremium\n',
   footer: '╰═════⊹⊱≼≽⊰⊹═════╯',
