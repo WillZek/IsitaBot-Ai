@@ -29,13 +29,13 @@ let chat = global.db.data.chats[m.chat];
 
     if (!chat.isBanned && m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
      let bienvenida = `┌─★ *${namebot}* \n│「 Bienvenido 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑ ${welcomeMessage}\n   │✑  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
-      await conn.sendMessage(m.chat, { image: ppp, caption: bienvenida, mentions: [who] }, { quoted: m })
+      await conn.sendMessage(m.chat, { image: { url: ppp }, caption: bienvenida, mentions: [who] }, { quoted: m })
     } else if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE || m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE) {
 
 const despMessage = global.db.data.chats[m.chat]?.despMessage || 'Se Fue😹';
 
  let bye = `┌─★ *${namebot}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑ ${despMessage}\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹\n*DESCRIPCIÓN DDL GRUPO:*\n\n${desc}`
-      await conn.sendMessage(m.chat, { image: ppp, caption: bye, mentions: [who] }, { quoted: m })
+      await conn.sendMessage(m.chat, { image: { url: ppp }, caption: bye, mentions: [who] }, { quoted: m })
     }
   }
 
