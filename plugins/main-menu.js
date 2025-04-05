@@ -242,5 +242,6 @@ await conn.sendMessage(m.chat, { image: { url: img }, caption: menu }, { mimetyp
 }
 
 handler.command = ['menu'];
+handler.register = true;
 
 export default handler;
