@@ -40,7 +40,7 @@ let tags = {
 
 const defaultMenu = {
   before: `
-> ᰔᩚ Hola! @⁨⚡︎🜲𝖂іᥣᥣzׁׅ֬ᥱƙׁׅ-᥆𝖿іᥴіᥲᥣ࿐⁩, Soy *Destiny☆*, Aquí tienes la lista de comandos. *(˶ᵔ ᵕ ᵔ˶)*
+> ᰔᩚ Hola! %name, Soy *${botname}*, Aquí tienes la lista de comandos. *(˶ᵔ ᵕ ᵔ˶)*
 
 ╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
 │✧ Modo » %mode
