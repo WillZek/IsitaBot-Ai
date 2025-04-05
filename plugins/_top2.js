@@ -29,7 +29,7 @@ let top = `*${x} Top Parejas ${x}*
 *5. ${user(e)}*
 *6. ${user(f)}*`.trim();
 
-m.reply(top, null, { mentions: [a, b]})
+m.reply(top, null, { mentions: [a, b, c, d, e, f]})
 }
 handler.help = handler.command = ['parejastop', 'topparejas']
 handler.tags = ['fun']
