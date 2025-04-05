@@ -1,43 +1,50 @@
-import { WAMessageStubType } from '@whiskeysockets/baileys'
+import {WAMessageStubType} from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
 
-export async function before(m, { conn, participants, groupMetadata }) {
-  if (!m.messageStubType || !m.isGroup) return true
-
-  let who = m.messageStubParameters[0]
-  let taguser = `@${who.split('@')[0]}`
+export async function before(m, {conn, participants, groupMetadata}) {
+  if (!m.messageStubType || !m.isGroup) return !0;
+  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => './storage/img/miniurl.jpg')
+  let img = await (await fetch(`${pp}`)).buffer()
   let chat = global.db.data.chats[m.chat]
-  let defaultImage = 'https://files.catbox.moe/i7uo2l.jpg';
-  let ppp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => './storage/img/miniurl.jpg')
 
-  if (chat.bienvenida) {
-    let img;
-    try {
-      let pp = await conn.profilePictureUrl(who, 'image');
-      img = await (await fetch(pp)).buffer();
-    } catch {
-      img = await (await fetch(defaultImage)).buffer();
-    }
-
-let desc = `${groupMetadata.desc?.toString() || '*NO HAY DESCRIPCIÓN*'}`
-
-  const welcomeMessage = global.db.data.chats[m.chat]?.welcomeMessage || 'Bienvenido/a :';
-
-let chat = global.db.data.chats[m.chat];
-
-// if (!chat.isBanned) return m.reply('🍭 El Bot Está Baneado En Este Chat');
-
-    if (!chat.isBanned && m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
-     let bienvenida = `┌─★ *${namebot}* \n│「 Bienvenido 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑ ${welcomeMessage}\n   │✑  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
-      await conn.sendMessage(m.chat, { image: { url: ppp }, caption: bienvenida, mentions: [who] }, { quoted: m })
-    } else if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE || m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE) {
-
-const despMessage = global.db.data.chats[m.chat]?.despMessage || 'Se Fue😹';
-
- let bye = `┌─★ *${namebot}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑ ${despMessage}\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹\n*DESCRIPCIÓN DDL GRUPO:*\n\n${desc}`
-      await conn.sendMessage(m.chat, { image: { url: ppp }, caption: bye, mentions: [who] }, { quoted: m })
+  if (chat.bienvenida && m.messageStubType == 27) {
+    if (chat.welcomeMessage) {
+      let user = `@${m.messageStubParameters[0].split`@`[0]}`
+      let welcome = chat.welcomeMessage
+        .replace('@user', () => user)
+        .replace('@group', () => groupMetadata.subject)
+        .replace('@desc', () => groupMetadata.desc || 'sin descripción');
+      await conn.sendAi(m.chat, botname, textbot, welcome, img, img, canal)
+    } else {
+      let bienvenida = `┌─★ _Isita-Bot_ \n│「 _Bienvenido_ 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  _Bienvenido_ a\n   │✑  ${groupMetadata.subject}\n   │✑  _Descripción_:\n${groupMetadata.desc || '_sin descripción_'}\n   └───────────────┈ ⳹`
+      await conn.sendAi(m.chat, botname, textbot, bienvenida, img, img)
     }
   }
 
-  return true
-}
+  if (chat.bienvenida && m.messageStubType == 28) {
+    if (chat.despMessage) {
+      let user = `@${m.messageStubParameters[0].split`@`[0]}`
+      let bye = chat.despMessage
+        .replace('@user', () => user)
+        .replace('@group', () => groupMetadata.subject)
+        .replace('@desc', () => groupMetadata.desc || 'sin descripción');
+      await conn.sendAi(m.chat, botname, textbot, bye, img, img)
+    } else {
+      let bye = `┌─★ _Isita-Bot_  \n│「 _BAYY_ 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  _Largate_\n   │✑ _Jamás te quisimos aquí_\n   └───────────────┈ ⳹`
+      await conn.sendAi(m.chat, botname, textbot, bye, img, img)
+    }
+  }
+
+  if (chat.bienvenida && m.messageStubType == 32) {
+    if (chat.sBye) {
+      let user = `@${m.messageStubParameters[0].split`@`[0]}`
+      let bye = chat.sBye
+        .replace('@user', () => user)
+        .replace('@group', () => groupMetadata.subject)
+        .replace('@desc', () => groupMetadata.desc || 'sin descripción');
+      await conn.sendAi(m.chat, botname, textbot, bye, img, img)
+    } else {
+      let kick = `┌─★ _Barboza Bot_  \n│「 _BAYY_ 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  _Largate_\n   │✑ _Jamás te quisimos aquí_\n   └───────────────┈ ⳹`
+      await conn.sendAi(m.chat, botname, textbot, kick, img, img)
+    }
+}}
