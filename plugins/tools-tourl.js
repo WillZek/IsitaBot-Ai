@@ -23,7 +23,7 @@ let handler = async (m) => {
       txt += `› Acortado : ${await shortUrl(link)}\n`
       txt += `› Tamaño : ${formatBytes(media.length)}\n`
       txt += `› Expiración : ${isTele ? 'No expira' : 'Desconocido'}\n\n`
-      txt += `> *🌵 Desarrollado por Daniel*`
+      txt += `> *${packname}*`
 
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 await m.react(done)
