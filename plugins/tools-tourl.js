@@ -1,70 +1,68 @@
-import fetch from "node-fetch";
+import fs from "fs";
+import path from "path";
 import crypto from "crypto";
-import { FormData, Blob } from "formdata-node";
-import { fileTypeFromBuffer } from "file-type";
+import fetch from "node-fetch";
+import FormData from "form-data";
 
-const handler = async (m, { conn }) => {
-let q = m.quoted ? m.quoted : m;
-  let mime = (q.msg || q).mimetype || "";
-  if (!mime) return m.reply("No media found", null, { quoted: fkontak });
-  let media = await q.download();
-let link = await catbox(media);
-  let caption = `📮 *L I N K :*
- \`\`\`• ${link}\`\`\`
-📊 *S I Z E :* ${formatBytes(media.length)}
-📛 *E x p i r e d :* "No Expiry Date" 
+let handler = async (m, { conn, text, command, usedPrefix }) => {
+    let q = m.quoted ? m.quoted : m;
+    if (!q) return m.reply(`🌱 Responde a un archivo usando: ${usedPrefix + command}`);
+
+    let buffer;
+
+    try {
+        buffer = await q.download();
+    } catch (e) {
+        if (q.url) {
+            console.log("Descargando desde URL:", q.url);
+            buffer = await fetch(q.url).then(res => res.buffer());
+        }
+    }
+
+    if (!buffer) return m.reply("No se pudo descargar el archivo.");
+
+    let mimeType = q.mimetype || "application/octet-stream";
+    let ext = mimeType.includes("/") ? mimeType.split("/")[1] : "bin";
+    let name = crypto.randomBytes(5).toString("hex") + "." + ext;
+    let filePath = `./src/${name}`;
+
+    fs.writeFileSync(filePath, buffer);
+
+    let file = await upload(filePath);
+    fs.unlinkSync(filePath);
+
+    if (!file || !file[0]?.url) return m.reply("Error al subir el archivo.");
+
+    let sizeMB = (file[0].size / (1024 * 1024)).toFixed(2);
+    let cap = `
+◜ Upload - Mega ◞
+
+≡ 🌴 \`URL :\` ${file[0].url}
+≡ 🌾 \`Nombre :\` ${file[0].name}
+≡ 🌿 \`Tamaño :\` ${sizeMB} MB
 `;
 
-  await m.reply(caption);
-}
-handler.command = handler.help = ['tourl']
-handler.tags = ['tools']
-handler.diamond = true
-handler.estrellas = 5;
-export default handler
+    conn.sendMessage(m.chat, { text: cap }, { quoted: m });
+};
+handler.tags = ["tools"]
+handler.help = handler.command = ["up", "tourl"];
+export default handler;
 
+async function upload(filePath) {
+    try {
+        const formData = new FormData();
+        formData.append("file", fs.createReadStream(filePath));
 
-function formatBytes(bytes) {
-  if (bytes === 0) {
-    return "0 B";
-  }
-  const sizes = ["B", "KB", "MB", "GB", "TB"];
-  const i = Math.floor(Math.log(bytes) / Math.log(1024));
-  return `${(bytes / 1024 ** i).toFixed(2)} ${sizes[i]}`;
-}
+        const response = await fetch("https://cdnmega.vercel.app/upload", {
+            method: "POST",
+            body: formData,
+            headers: formData.getHeaders()
+        });
 
-
-/**
- * Upload image to catbox
- * Supported mimetype:
- * - `image/jpeg`
- * - `image/jpg`
- * - `image/png`s
- * - `image/webp`
- * - `video/mp4`
- * - `video/gif`
- * - `audio/mpeg`
- * - `audio/opus`
- * - `audio/mpa`
- * @param {Buffer} buffer Image Buffer
- * @return {Promise<string>}
- */
-async function catbox(content) {
-  const { ext, mime } = (await fileTypeFromBuffer(content)) || {};
-  const blob = new Blob([content.toArrayBuffer()], { type: mime });
-  const formData = new FormData();
-  const randomBytes = crypto.randomBytes(5).toString("hex");
-  formData.append("reqtype", "fileupload");
-  formData.append("fileToUpload", blob, randomBytes + "." + ext);
-
-  const response = await fetch("https://catbox.moe/user/api.php", {
-    method: "POST",
-    body: formData,
-    headers: {
-      "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
-    },
-  });
-
-  return await response.text();
+        const result = await response.json();
+        return result.success ? result.files : null;
+    } catch (error) {
+        console.error("Error al subir archivo:", error);
+        return null;
+    }
 }
