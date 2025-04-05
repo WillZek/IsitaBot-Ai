@@ -43,10 +43,10 @@ const defaultMenu = {
 > ᰔᩚ Hola! @⁨⚡︎🜲𝖂іᥣᥣzׁׅ֬ᥱƙׁׅ-᥆𝖿іᥴіᥲᥣ࿐⁩, Soy *Destiny☆*, Aquí tienes la lista de comandos. *(˶ᵔ ᵕ ᵔ˶)*
 
 ╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
-│✧ Modo » Privado 
+│✧ Modo » %mode
 │✦ Bot » Principal 🅥
-│ⴵ Activada » 2h 32m 52s
-│✰ Usuarios » 27
+│ⴵ Activada » %muptime
+│✰ Usuarios » %totalreg
 │✐︎ Plugins » 259
 │⚘ Versión » ^2.3.0
 │🜸 Baileys » Multi Device
