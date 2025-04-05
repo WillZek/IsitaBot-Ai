@@ -204,7 +204,7 @@ let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
 "https://i.ibb.co/GJS3cvq/file.jpg",
 "https://i.ibb.co/YXKHfvL/file.jpg"]
 
-let img = './storage/img/miniurl.png';
+let img = './storage/img/miniurl.jpg';
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
 
 global.rcanal = {
