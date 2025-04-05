@@ -1,4 +1,4 @@
-let handler = async(m, { groupMetadata, command, conn, text, usedPrefix}) {
+let handler = async(m, { groupMetadata, command, conn, text, usedPrefix }) => {
 
 let user = a => '@' + a.split('@')[0]
 let ps = groupMetadata.participants.map(v => v.id)
