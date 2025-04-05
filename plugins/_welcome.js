@@ -10,7 +10,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let defaultImage = 'https://files.catbox.moe/i7uo2l.jpg';
   let ppp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => './storage/img/miniurl.jpg')
 
-  if (chat.welcome) {
+  if (chat.bienvenida) {
     let img;
     try {
       let pp = await conn.profilePictureUrl(who, 'image');
