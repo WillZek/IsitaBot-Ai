@@ -1,7 +1,6 @@
 // By WillZek >> https://github.com/WillZek
 
 import fetch from 'node-fetch';
-import fg from 'senna-fg';
 
 let handler = async(m, { conn, usedPrefix, command, text }) => {
 
