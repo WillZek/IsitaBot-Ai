@@ -39,7 +39,8 @@ let tags = {
 }
 
 const defaultMenu = {
-  before: `> ᰔᩚ Hola! %name, Soy *${botname}*, Aquí tienes la lista de comandos. *(˶ᵔ ᵕ ᵔ˶)*\n╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
+  before: `> ᰔᩚ Hola! %name, Soy *${botname}*, Aquí tienes la lista de comandos. *(˶ᵔ ᵕ ᵔ˶)*\n
+╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
 │✧ Modo » %mode
 │✦ Bot » Principal 🅥
 │ⴵ Activada » %muptime
