@@ -29,7 +29,11 @@ let top = `*${x} Top Parejas ${x}*
 *5. ${user(e)}*
 *6. ${user(f)}*`.trim();
 
-m.reply(top, null, { mentions: [a, b, c, d, e, f]})
+let img = 'https://cdnmega.vercel.app/media/ElxGEJKS@sxtjp-OBd2ThNjqhx5BELk1eFRpV_CZNWCo3DSNNXXk';
+
+// m.reply(top, null, { mentions: [a, b, c, d, e, f]})
+
+conn.sendMessage(m.chat, { image: { url: img }, caption: top }, { quoted: m });
 }
 
 handler.command = ['parejastop', 'topparejas']
