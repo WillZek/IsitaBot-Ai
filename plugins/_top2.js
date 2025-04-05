@@ -1,6 +1,3 @@
-import util from 'util'
-import path from 'path'
-
 let handler = async(m, { groupMetadata, command, conn, text, usedPrefix}) {
 
 let user = a => '@' + a.split('@')[0]
