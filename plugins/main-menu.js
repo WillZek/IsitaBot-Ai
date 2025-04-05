@@ -38,7 +38,7 @@ let tags = {
   'advanced': '💫 ADVANCED 💫',
 }
 
-const defaultMenu = {
+/*const defaultMenu = {
   before: `> ᰔᩚ Hola! %name, Soy *${botname}*, Aquí tienes la lista de comandos. *(˶ᵔ ᵕ ᵔ˶)*\n
 ╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
 │✧ Modo » %mode
@@ -51,6 +51,23 @@ const defaultMenu = {
 ╰ׅ┈ࠢ͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴ ⋱࣭ ᩴ  ⋮֔   ᩴ ⋰╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜┈ࠢ͜╯ׅ
 %readmore
 \t\t\t_*𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒*_ ﭢ
+`.trimStart(),*/
+const defaultMenu = {
+  before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
+
+"「💛」 ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
+
+╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
+✦  👤 *Cliente:* %name
+✦  🔱 *Modo:* Público
+✧  ✨ *Baileys:* Multi Device
+✦  🪐 *Tiempo Activo:* %muptime
+✧  💫 *Usuarios:* %totalreg 
+╚━━━━━━━━━━━━━━
+%readmore
+*✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧*\n\n> Para Ser Un Sub Bots Usa #code para codigo de 8 dígitos y #qr para codigo qr.
+
+\t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
 `.trimStart(),
   header: '╭═════⊹⊱≼「 *%category* 」≽⊰⊹════•',
   body: '┃➤› 🌠 . %cmd %islimit %isPremium\n',
