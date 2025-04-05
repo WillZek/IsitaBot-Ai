@@ -46,6 +46,7 @@
         "@vitalets/google-translate-api": "^9.2.0",
         "@whiskeysockets/baileys": "github:ds6/bails",
         "@xct007/frieren-scraper": "^0.0.2",
+        "senna-fg": "0.0.9",
         "google-libphonenumber": "latest",
         "@StarlightsTeam/Scraper": "github:StarlightsTeam/StarlightsTeam-Scraper",
         "acrcloud": "^1.4.0",
