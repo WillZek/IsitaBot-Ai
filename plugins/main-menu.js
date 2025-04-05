@@ -21,7 +21,6 @@ let Styles = (text, style = 1) => {
   return output.join('');
 };
 let tags = {
-  'anime': '💫 ANIME 💫',
   'main': '🌟 INFO 🌟',
   'search': '💫 SEARCH 💫',
   'rg': '💫 REGISTRO 💫',
