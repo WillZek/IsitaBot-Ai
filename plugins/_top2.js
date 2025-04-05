@@ -33,7 +33,7 @@ let img = 'https://cdnmega.vercel.app/media/ElxGEJKS@sxtjp-OBd2ThNjqhx5BELk1eFRp
 
 // m.reply(top, null, { mentions: [a, b, c, d, e, f]})
 
-conn.sendMessage(m.chat, { image: { url: img }, caption: top }, { quoted: m });
+conn.sendMessage(m.chat, { image: { url: img }, caption: top, mentions: [a, b, c, d, e, f] }, { quoted: m });
 }
 
 handler.command = ['parejastop', 'topparejas'];
