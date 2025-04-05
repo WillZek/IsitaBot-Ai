@@ -193,7 +193,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let pp13 = 'https://i.ibb.co/Cs6Tt9V/Sylph.jpg'
     let pp14 = 'https://i.ibb.co/JmcS3kv/Sylph.jpg'
     let pp15 = 'https://i.ibb.co/Cs6Tt9V/Sylph.jpg'
-    let img = 'https://i.ibb.co/s9N9QhG/file.jpg'
+    let imgg = 'https://i.ibb.co/s9N9QhG/file.jpg'
     await m.react('🌠')
 
 let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
@@ -204,6 +204,7 @@ let imagenes = ["https://i.ibb.co/YXKHfvL/file.jpg",
 "https://i.ibb.co/GJS3cvq/file.jpg",
 "https://i.ibb.co/YXKHfvL/file.jpg"]
 
+let img = './storage/img/miniurl.png';
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
 
 global.rcanal = {
