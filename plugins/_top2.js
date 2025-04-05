@@ -36,7 +36,7 @@ let img = 'https://cdnmega.vercel.app/media/ElxGEJKS@sxtjp-OBd2ThNjqhx5BELk1eFRp
 conn.sendMessage(m.chat, { image: { url: img }, caption: top }, { quoted: m });
 }
 
-handler.command = ['parejastop', 'topparejas']
+handler.command = ['parejastop', 'topparejas'];
 handler.tags = ['fun']
 handler.group = true
 export default handler
